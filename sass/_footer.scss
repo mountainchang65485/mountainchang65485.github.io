@@ -1,0 +1,32 @@
+footer {
+    background-color: #312f2f;
+    text-align: center;
+    color: #fff;
+    line-height: 70px;
+    @include respond-to(ss){
+        line-height: 40px;
+    }
+    .copyright{
+        @include respond-to(ss){
+            span{
+                display: block;
+            }
+        }        
+    }
+    a {
+        font-size: 24px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        &+a {
+            margin-left: 0;
+        }
+        &.i-fb {
+            color: #fff;
+        }
+        &.i-yt {
+            color: #fff;
+        }
+        
+    }
+}

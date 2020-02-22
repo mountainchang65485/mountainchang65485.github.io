@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mountain Chang</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/animation.css">
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+
+<body>
+    <div class="navbar-fixed">
+        <nav class="z-depth-0 navbar white">
+          <div class="nav-wrapper ">
+            <a href="#" class="brand-logo" style="line-height: 0px;"><img src="http://fakeimg.pl/50x50/282828/EAE0D0/?text=PJCHENder"></a>
+            <a  href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li class="nav-item"><a href="#" class="option black-text">project</a></li>
+              <li class="nav-item"><a href="#" class="option black-text">about</a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="#">project</a></li>
+      <li><a href="#">about</a></li>
+    </ul>
+    <header class="title_intro container">
+        <div>
+            <h3>Mountain Chang <span>is a designer specialising in illustration, graphic and UI design.</span></h3>
+        </div>
+    </header>
+    <section class="works_preview container">
+            <!-- <P class="title" style="font-size: 21px; margin-bottom: 20px;">project</P> -->
+            <div class="row margin_cut">
+                <div class="works col s12 m6 l4"><a href=""><img class="responsive-img" src="http://fakeimg.pl/300x300/282828/EAE0D0/?text=PJCHENder" alt=""></a></div>
+                <div class="works col s12 m6 l4"><a href="event_reAnniversary.html"><img class="responsive-img" src="images/re_cover.png" alt=""></a></div>
+                <div class="works col s12 m6 l4"><a href="project_mrspring.html"><img class="responsive-img" src="http://fakeimg.pl/300x300/282828/EAE0D0/?text=PJCHENder" alt=""></a></div>
+                <div class="works col s12 m6 l4"><a href=""><img class="responsive-img" src="http://fakeimg.pl/300x300/282828/EAE0D0/?text=PJCHENder" alt=""></a></div>
+                <div class="works col s12 m6 l4"><a href=""><img class="responsive-img" src="http://fakeimg.pl/300x300/282828/EAE0D0/?text=PJCHENder" alt=""></a></div>
+                <div class="works col s12 m6 l4"><a href=""><img class="responsive-img" src="http://fakeimg.pl/300x300/282828/EAE0D0/?text=PJCHENder" alt=""></a></div>
+                <div class="works col s12 m6 l4"><a href=""><img class="responsive-img" src="http://fakeimg.pl/300x300/282828/EAE0D0/?text=PJCHENder" alt=""></a></div>
+                <div class="works col s12 m6 l4"><a href=""><img class="responsive-img" src="http://fakeimg.pl/300x300/282828/EAE0D0/?text=PJCHENder" alt=""></a></div>
+                <div class="works col s12 m6 l4"><a href=""><img class="responsive-img" src="http://fakeimg.pl/300x300/282828/EAE0D0/?text=PJCHENder" alt=""></a></div>
+            </div>
+    </section>
+    <footer class="container">
+        <p>©Mountain Chang 2019</p>
+    </footer>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/animation.js"></script>  
+    <script>
+        
+        var zero=0;
+        $(window).scroll(function(){
+                $("div.navbar-fixed").toggleClass("hide",$(window).scrollTop()>zero);
+                zero=$(window).scrollTop();
+            });
+
+        
+        $(document).ready(function(){
+          $('.sidenav').sidenav();
+        });
+    </script>
+</body>
+</html>

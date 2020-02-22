@@ -1,0 +1,46 @@
+
+@import "default";
+@import "mixins";
+@import "component";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional');
+*{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.title_intro{
+    padding: 90px 0px;
+    @include respond-to(px600){
+        padding: 60px 0px;
+    }
+    h3{
+        font-weight:bold;
+        font-size: 48px;
+        line-height: 1.2;
+        span{
+            -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #333;
+        }
+        @include respond-to(px768){
+            font-size: 36px;
+        }
+        @include respond-to(px600){
+            font-size: 27px;
+        }
+
+    }
+}
+
+.works img{
+    width:100%;
+}
+.works{
+    padding: 5px !important;
+    line-height: 0;
+}
+.margin_cut{
+    margin-left: -5px;
+    margin-right: -5px;
+}
+a:hover{
+    background-color:transparent !important;
+}

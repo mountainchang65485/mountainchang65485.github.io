@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Dollhouse</title>
+    <link rel="stylesheet" href="css/m.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    
+</head>
+<body style="background-color: #F0E7DE;">
+    
+    <nav>
+        <h1><a href="index.html"><img src="https://fakeimg.pl/50x50/"></a></h1>
+
+        <ul class="main_options">
+            <li><a href="#" class="option">project</a></li>
+            <li><a href="#" class="option">about</a></li>
+        </ul>
+        <p class="clean"></p>
+</nav>
+    <section class="title_intro">
+            <div class="container">
+                <h3 style="color: #a0724a;">The Dollhouse: A Picture Book for Character Education</h3>
+            </div>
+    </section>
+    <!-- <section class="title_pic">
+            <div class="container_with_pic">
+                <div class="cover">
+                    <img src="images/facebook-ad02.png" alt="">
+                </div>
+            </div>
+    </section> -->
+    <section class="intro">
+            <div class="container">
+                    <!-- <p>此專案為RE紅包兩週年慶活動，以簡單易上手的互動小遊戲吸引使用者的目光，透過遊戲贈予使用者現金回饋與等值RE店家之服務，驅使消費者增加使用平台點數的意願，提高黏著度。</p> -->
+                    <!-- <p class="eng">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad illo sed quae sequi odio in repellendus incidunt animi, excepturi quibusdam similique dolorum deserunt, aperiam corporis vero. Ipsa, explicabo! Recusandae, beatae.</p> -->
+                    <div class="content" style="margin-bottom:60px; margin-top:0px;">
+                        <div class="pics">
+                            <img src="images/re_land_mockup_ipad.png" alt="" id="ipad">
+                            <span class="iphone"><img src="images/re_land_mockup.png" alt=""></span>
+                        </div>
+                        <div class="text"  style="color: #a0724a;">
+                            <p>在此專案中，主要負責的工作為遊戲的介面設計與流程規劃，以及各個頁面的切版，此外，依據不同行銷需求製作周邊宣傳視覺設計。</p>
+                            <!-- <p class="eng">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad illo sed quae sequi odio in repellendus incidunt animi, excepturi quibusdam similique dolorum deserunt, aperiam corporis vero. Ipsa, explicabo! Recusandae, beatae.</p> -->
+                        </div>
+
+                    </div>
+            </div>
+    </section>
+    
+    <section class="illus_detail">
+            <div class="container_with_pic">
+                <div class="cover">
+                    <img src="images/doll_house01_nbg.jpg" alt="">
+                </div>
+            </div>
+    </section>
+    <section class="illus_detail">
+            <div class="container_with_pic">
+                <div class="cover">
+                    <img src="images/doll_house02.jpg" alt="">
+                </div>
+            </div>
+    </section>
+    <section class="illus_detail">
+            <div class="container_with_pic">
+                <div class="cover">
+                    <img src="images/doll_house4-2.jpg" alt="">
+                </div>
+            </div>
+    </section>
+    <section class="illus_detail">
+            <div class="container_with_pic">
+                <div class="cover">
+                    <img src="images/doll_house05.jpg" alt="">
+                </div>
+            </div>
+    </section>
+    <section class="illus_detail">
+            <div class="container_with_pic">
+                <div class="cover">
+                    <img src="images/doll_house06.jpg" alt="">
+                </div>
+            </div>
+    </section>
+    <section class="illus_detail">
+            <div class="container_with_pic">
+                <div class="cover">
+                    <img src="images/doll_house9-2.jpg" alt="">
+                </div>
+            </div>
+    </section>
+    <footer></footer>
+    <script>
+        $(window).ready(function(){
+            var ipad=$('#ipad').width();
+            var macH=$('span.macbook').height();
+            $('span.iphone').width(ipad*0.48);
+            $('div.screen').height(macH*0.8);
+        });
+        $(window).resize(function(){
+            var ipad=$('#ipad').width();
+            var macH=$('span.macbook').height();
+            $('span.iphone').width(ipad*0.48);
+            $('div.screen').height(macH*0.8);
+        });
+        $(window).scroll(function(){
+              var scroll= $(window).scrollTop();
+              if(scroll>0){
+              $('header').css('backgroundColor','#fff');
+              $('header').css('position','fixed');
+              $('header').css('boxShadow','0px 0px 5px rgba(0,0,0,0.2)');
+              }
+              else if(scroll==0){
+              $('header').css('backgroundColor','rgba(255,255,255,0)');
+              $('header').css('position','relative'); 
+              $('header').css('boxShadow','none');
+              }
+        });
+        
+        
+    </script>
+    
+</body>
+</html>

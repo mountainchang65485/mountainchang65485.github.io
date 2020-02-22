@@ -1,0 +1,127 @@
+.clean{
+    clear: both;
+}
+// nav{
+//     width: 100%;
+//     display: flex;
+//     flex-direction: row;
+//     padding:0px 20px;
+//     z-index:100;
+//     transition: 0.1s;
+//     position: fixed;
+//     @include respond-to(px768){
+//         padding:0px 12px;
+//     }
+//     h1{
+//        margin:15px 0px;
+//         @include respond-to(px768){
+//            width:40px;
+//            margin:10px 0px;
+//         }
+//     }
+//     .main_options{
+//         display: flex;
+//         flex-direction: row;
+//         justify-content:flex-end;
+//         align-items: center;
+//         width: 100%;
+//         li{
+//             display: flex;
+//             align-items: center;
+//             a{
+//                padding:0px 10px;
+//                text-decoration: none;
+//                color: #333333;
+//                font-family:"acid", sans-serif;
+//                font-size:21px;
+//                line-height:0;
+//                vertical-align: middle;
+//             }
+
+//         }
+//     }
+
+// }
+
+.hide{
+    transform: translateY(-100%);
+    transition: 0.5s;
+}
+
+h3{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.container{
+    // margin: auto;
+    max-width:1200px !important;
+    // padding: 30px 90px;
+    // @include respond-to(px768){
+    //     width: 100%;
+    //     padding: 30px 30px;
+    // }
+}
+
+// .container_with_pic{
+//     margin: auto;
+//     width: 100%;
+//     @include respond-to(px768){
+//         width: 100%;
+//         padding: 0px;
+//     }
+// }
+
+// .title_intro{
+//     width: 100%;
+//     padding-top:100px;
+//     .container{
+//         margin: auto;
+//         max-width:960px;
+//         padding:0px 90px 30px 90px;
+//         @include respond-to(px768){
+//             width: 100%;
+//             padding: 30px 30px;
+//         }
+//         h3{ 
+//             font-size:70px;
+//             font-family:'Share', sans-serif;
+//             font-weight:700;
+//             margin:0px;
+//             line-height:1;
+//             display: inline-block;
+//             color: #333;
+//             @include respond-to(px768){
+//                font-size:48px;
+//                width: 100%;
+//             }
+//         }
+//     }
+// }
+// .content{
+//     display:flex;
+//     flex-direction:row;
+//     align-items: center;
+//     margin-top: 60px;
+//     .pics{
+//         flex:1;
+//         position: relative;
+//         @include respond-to(px600){
+//             flex:1;
+//             margin-bottom: 60px;
+//             margin-right:0px;
+//             padding:0px 25px;
+//         }
+//     }
+//         .text{
+//         p{
+//             font-size:14px;
+//             font-family: 'Noto Sans TC', sans-serif;
+//             font-weight:300;
+//             text-align: justify;
+//             margin-bottom: 10px;
+//         }
+//         flex:1;
+//     }
+//     @include respond-to(px600){
+//         display:block;
+//     }
+// }

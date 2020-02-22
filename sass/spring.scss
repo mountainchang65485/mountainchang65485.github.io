@@ -1,0 +1,906 @@
+@import "default";
+@import "mixins";
+@import "component";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional');
+.col{
+    padding: 0px !important;
+}
+
+.title_intro{
+    padding: 90px 0px;
+    @include respond-to(px600){
+        padding: 60px 0px;
+    }
+    h2{
+        font-weight:bold;
+        font-size: 48px;
+        line-height: 1.2;
+        span{
+            -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #333;
+            @include respond-to(px600){
+                -webkit-text-stroke-width:0.75px;
+            }
+        }
+        @include respond-to(px768){
+            font-size: 36px;
+        }
+        @include respond-to(px600){
+            font-size: 27px;
+        }
+    }
+}
+
+/* 第一屏============================================================== */
+  .mt_first_page {
+    background-image: url("../images/backGround.jpg");
+    background-repeat: repeat;
+    background-size: 100%;
+    width: 100%;
+    height:90vh;
+    position: relative;
+    top: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+    @include respond-to(ld){
+        height: 70vh;
+    }
+    // @include respond-to(px768){
+    //     height: 60vh;
+    // }
+    // @include respond-to(px600){
+    //     height:50vh;
+    // }
+}
+
+// .mt_first_page .container {
+//     position: relative;
+//     width: 100% !important;
+
+// }
+/* 第一屏 背景============================================================== */
+
+.mt_bg_wrap {
+    width: 100%;
+    overflow: hidden;
+    bottom: 0px;
+}
+
+.mt_cloud {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 70%;
+    z-index:0;
+    @include respond-to(px768){
+        width: 200%;
+        left:50%;
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes cloudGo {
+    0% {
+        -webkit-transform: translateX(0%);
+    }
+
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+.mt_first_page .cloud_large {
+    display: flex;
+    flex-basis: row;
+    position: relative;
+    animation: 15s cloudGo linear infinite;
+}
+
+.bg_mt {
+    // background-image: url("../images/fjMountain.png");
+    // background-repeat: no-repeat;
+    // background-position-y:100px;
+    // background-size: contain;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    bottom:0px;
+}
+
+#mt_water {
+    width: 100%;
+    //position: relative;
+    bottom:0px;
+    z-index: 3;
+}
+
+.mt_wrap{
+    position: absolute;
+    bottom: 0px;
+    z-index:1;
+    width:100%;
+    @include respond-to(px768){
+        width:150%;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    @include respond-to(px600){
+        width:200%;
+        bottom:10%;
+    }
+    #fj{
+        width: 100%; 
+        position: relative;
+        top:20%;
+    }
+}
+
+#water_color_change {
+    width: 100%;
+    height: 200px;
+    background: #ff9f9f;
+    position: absolute;
+    transition: 2s;
+    z-index: 3;
+    bottom: 0px;
+}
+
+#water_color_nochange {
+    width: 100%;
+    height: 200px;
+    background-image:
+        /* linear-gradient(225deg, #ffb199 10%, #7e2dff 90%), */
+        linear-gradient(to bottom, transparent, #fff09b);
+    background-blend-mode: screen;
+    position: absolute;
+    bottom:0px;
+    z-index: 4;
+}
+
+.mt_first_page{
+    .wrap{
+        z-index: 5;
+    }
+}
+
+#water_wrap{
+    position: relative;
+    bottom: -400px;
+}
+
+#canvas {
+    top: 0;
+    left: 0;
+  }
+
+
+/* 第一屏 動畫============================================================== */
+
+.monkey_animation {
+    position:absolute;
+    width:50%;
+    //height: 500px;
+    pointer-events: none;
+    margin: auto;
+    transition: 0.5s;
+    z-index: 10;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-5%);
+}
+
+#monkey_wrap{
+    position: relative;
+    max-width: 300px;
+    transition: 0.5s;
+    margin: auto;
+}
+
+#mr_spring_for_firstpage {
+    width:100%;
+    margin-top:0px;
+    filter: drop-shadow(0 0 5px rgba(95, 69, 39, 0.7));
+}
+
+#wave01 {
+    position: absolute;
+    left:-5%;
+    // top:230px;
+    bottom:10%;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#wave01 img {
+    width: 50px;
+    animation:4s waveScale ease-out infinite;
+    animation-delay:0.5s;
+    opacity: 0;
+    @include respond-to(px600){
+        width:30px;
+
+    }
+}
+
+#wave01 img:nth-of-type(2) {
+    animation-delay:1s;
+    left: 0px;
+}
+
+#wave01 img:nth-of-type(3) {
+    animation-delay:1.5s;
+    left: -50px;
+}
+
+@keyframes waveScale {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        left: 400px;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+        left: -50px;
+    }
+}
+
+
+#wave02{
+    position: absolute;
+    right: 0px;
+    bottom:-50px;
+    pointer-events: none;
+    opacity: 0;
+    @include respond-to(px600){
+        bottom:0px;
+    }
+}
+
+#wave02 img {
+    width: 125px;
+    animation:3s  waveScale02  ease-out infinite;
+    animation-delay:3s;
+    @include respond-to(px600){
+        width:60px;
+    }
+}
+#wave02 img:nth-of-type(2) {
+    animation-delay:2s;
+    /* top: 0px; */
+}
+
+#wave02 img:nth-of-type(3) {
+    animation-delay:1s;
+    /* top: 200px; */
+}
+
+@keyframes waveScale02 {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+
+.sk_wrap {
+    position: absolute;
+    bottom:30%;
+    right:20%;
+    pointer-events: none;
+}
+
+.sk_wrap02 {
+    position: absolute;
+    bottom:10%;
+    left:0px;
+}
+
+.sk_wrap .sk {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: 3s smokeScale ease-out infinite;
+    animation-delay: 0.5s;
+    opacity: 0;
+    @include respond-to(px600){
+        width:48px;
+        height:20px;
+    }
+}
+
+.sk_wrap .sk:nth-of-type(2) {
+    animation-delay: 2s;
+    bottom: 150px;
+
+}
+
+.sk_wrap .sk:nth-of-type(3) {
+    animation-delay: 3s;
+    bottom: 100px;
+}
+
+
+
+.sk_wrap02 .sk {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: 3s smokeScale ease-out infinite;
+    animation-delay: 0.5s;
+    opacity: 0;
+    @include respond-to(px600){
+        width:48px;
+        height:20px;
+    }
+}
+
+.sk_wrap02 .sk:nth-of-type(2) {
+    animation-delay: 2s;
+    bottom: 150px;
+
+}
+
+.sk_wrap02 .sk:nth-of-type(3) {
+    animation-delay: 3s;
+    bottom: 100px;
+}
+
+@keyframes smokeScale {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+        bottom: 0px;
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(3);
+        opacity: 0;
+        bottom: 200px;
+        height: 40px;
+    }
+}
+
+@keyframes smokeGo {
+    0% {
+        bottom: 0px;
+    }
+
+    100% {
+
+        bottom: 200px;
+    }
+}
+
+/* ============================================================== */
+
+.title_pic_re_event{
+    background:url(../images/backGround.jpg);
+    background-repeat:repeat-y;
+    background-attachment: fixed;
+    .cover{
+        max-width:1200px;
+        margin: auto;
+    }
+}
+
+.intro{
+    .row{
+        margin-top: 60px;
+        @include respond-to(px768){
+            margin:auto;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+        @include respond-to(px600){
+            flex-direction:column;
+        }
+        .pics{
+            // margin-right:90px;
+            position: relative;
+            }
+        }
+        .text{
+            text-align: justify;
+            font-size: 14px;
+            font-weight:300;
+            @include respond-to(px600){
+                padding-left:0px !important;
+            }
+        }
+}
+
+.about_game{
+    padding-top: 60px;
+    .text_title{
+        h3{
+            font-size:27px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight:600;
+            margin: 0;
+            @include respond-to(px600){
+                font-size:21px;
+            }
+        }
+        .eng_title{
+            font-size:21px;
+            margin-bottom: 20px;
+            line-height: 1;
+            font-weight:500;
+            font-family:'Yanone Kaffeesatz', sans-serif;
+            @include respond-to(px600){
+                font-size:18px;
+            }
+        }
+    }
+    .pj_info{
+        font-size:14px;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-weight:300;
+        text-align: justify;
+        display:block;
+        display: none;
+        @include respond-to(px768){
+            display:block;
+        }
+    }
+    .content{
+        
+        .text{
+            // display: flex;
+            // flex-direction:row;
+            // align-items: center;
+            // @include respond-to(px600){
+            //     flex-direction:column-reverse;
+            // }
+            
+            p{
+                font-size:14px;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-weight:300;
+                text-align: justify;
+                margin-bottom: 10px;
+            }
+            
+            .pj_info{
+                display:block;
+                padding-right:20px !important;
+                @include respond-to(px768){
+                    display:none;
+                }
+            }
+            
+        }
+        .pics{
+            // display: flex;
+            position: relative;
+            // overflow: hidden;
+            // flex-direction: row;
+            // justify-content:flex-end;
+            // @include respond-to(px600){
+            //     display:inline-block;
+            //     text-align: center; 
+            // }
+            .get_chance_video{
+                position:absolute;
+                z-index:-1;
+                top:50%;
+                transform: translate(-20px,-52%);
+                @include respond-to(px768){
+                    left: 50%;
+                    transform: translate(-49%,-41.5%);
+                }
+               
+                video{
+                    width:100%;
+                }
+            }
+            .mac_frame{
+                width:100%;
+                z-index: 10;
+                img{
+                    width:100%;
+                }
+                @include respond-to(px768){
+                    width: 120%;
+                }
+            }
+
+        }
+
+    }
+}
+video{
+    width: 100%;
+}
+.sub_content{
+    margin: 0px -5px;
+    .pics{
+        font-size: 14px;
+        padding:0px 5px !important;
+        font-weight:300;
+        text-align: justify;
+    }
+}
+
+.start_game{
+    .container{
+        padding-top:90px;
+        padding-bottom:90px;
+        @include respond-to(px600){
+            padding-top:30px;
+            padding-bottom:30px;
+        }
+    }
+    .content{
+        display: flex;
+        flex-direction: row-reverse;
+        @include respond-to(px992){
+            flex-direction: column;
+        }
+        .text{
+            vertical-align: middle;
+            padding-left:20px !important;
+            @include respond-to(px992){
+                padding-left:0px !important;
+            }
+            h3{
+                font-size:27px;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-weight:600;
+                margin: 0;
+                @include respond-to(px600){
+                    font-size:21px;
+                }
+            }
+            .eng_title{
+                font-size:21px;
+                margin-bottom: 20px;
+                line-height: 1;
+                font-weight:500;
+                font-family:'Yanone Kaffeesatz', sans-serif;
+                @include respond-to(px600){
+                    font-size:18px;
+                }
+            }
+            p{
+                font-size:14px;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-weight: 300;
+                text-align: justify;
+                margin-bottom: 10px;
+            }
+        }
+        // .pics{
+        //     margin-left: -35px;
+        // }
+
+    }
+}
+
+
+
+.booking{
+    // background-color: #eee;
+    background-image: url(../images/backGround.jpg);
+    background-repeat:repeat;
+    .container{
+        padding-top:90px;
+        padding-bottom: 0px;
+        .content{
+            @include respond-to(px992){
+                display:block;
+            }
+        .text{
+            padding-right:24px !important;
+            @include respond-to(px992){
+                padding-right:0px !important;
+            }
+            @include respond-to(px600){
+                padding-right:0px;
+            }
+            h3{
+                font-size:27px;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-weight:600;
+                margin: 0;
+                @include respond-to(px600){
+                    font-size:21px;
+                }
+            }
+            .eng_title{
+                font-size:21px;
+                margin-bottom: 20px;
+                line-height: 1;
+                font-weight:500;
+                font-family:'Yanone Kaffeesatz', sans-serif;
+                @include respond-to(px600){
+                    font-size:18px;
+                }
+            }
+            p{
+                font-size:14px;
+                font-family: 'Noto Sans TC', sans-serif;
+                text-align: justify;
+                font-weight:300;
+                margin-bottom: 10px;
+                @include respond-to(px600){
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .pics{
+            // img{
+            //     margin: auto;
+            //     margin-right:0px;
+            //     width:260px;
+            //     position: absolute;
+            //     right: 0px;
+            //     @include respond-to(px768){
+            //         margin: auto;
+            //         left: 0px;
+            //     }
+            // }
+            @include respond-to(px768){
+                justify-content: center;
+            }
+            @include respond-to(px600){
+                margin-bottom: 30px;
+            }
+        }
+    }
+  }
+}
+.log_in_mission{
+    .container{
+        padding-top:90px;
+        padding-bottom:90px;
+        @include respond-to(px600){
+            padding-top:30px;
+            padding-bottom:30px;
+        }
+    }
+    .content{
+        display: flex;
+        flex-direction:row-reverse;
+        align-items: center;
+        @include respond-to(px992){
+            display:block;
+        }
+        .text{
+            padding-left:24px !important;
+            @include respond-to(px992){
+                padding-left: 0px !important;
+            }
+            h3{
+                font-size:27px;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-weight:600;
+                margin: 0;
+                @include respond-to(px600){
+                    font-size:21px;
+                }
+            }
+            .eng_title{
+                font-size:21px;
+                margin-bottom: 20px;
+                line-height: 1;
+                font-weight:500;
+                font-family:'Yanone Kaffeesatz', sans-serif;
+                @include respond-to(px600){
+                    font-size:18px;
+                }
+            }
+            p{
+                font-size:14px;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-weight: 300;
+                text-align: justify;
+                margin-bottom: 10px;
+            }
+        }
+        .pics{
+            img{
+                margin: auto;
+                margin-left:0px;
+                width:260px;
+                @include respond-to(px768){
+                    margin: auto;
+                }
+            }
+            @include respond-to(px768){
+                justify-content: center;
+            }
+            @include respond-to(px600){
+                margin-bottom: 30px;
+            }
+
+        }
+
+    }
+}
+
+
+.account{
+    .container{
+        padding-top:90px;
+        padding-bottom:90px;
+        @include respond-to(px600){
+            padding-top:30px;
+            padding-bottom:30px;
+        }
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        @include respond-to(px992){
+            display:block;
+        }
+        .text{
+            padding-right:24px !important;
+            @include respond-to(px992){
+                padding-right: 0px !important;
+            }
+            h3{
+                font-size:27px;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-weight:600;
+                margin: 0;
+                @include respond-to(px600){
+                    font-size:21px;
+                }
+            }
+            .eng_title{
+                font-size:21px;
+                margin-bottom: 20px;
+                line-height: 1;
+                font-weight:500;
+                font-family:'Yanone Kaffeesatz', sans-serif;
+                @include respond-to(px600){
+                    font-size:18px;
+                }
+            }
+            p{
+                font-size:14px;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-weight: 300;
+                text-align: justify;
+                margin-bottom: 10px;
+            }
+        }
+        .pics{
+            img{
+                margin: auto;
+                margin-left:0px;
+                width:260px;
+                @include respond-to(px768){
+                    margin: auto;
+                }
+            }
+            @include respond-to(px768){
+                justify-content: center;
+            }
+            @include respond-to(px600){
+                margin-bottom: 30px;
+            }
+
+        }
+
+    }
+}
+
+
+.landing_page{
+    background-color: #eee;
+    // background-image: url(../images/Mr_Mobile_s.png);
+    // background-repeat: no-repeat;
+    // background-size:cover;
+    // background-attachment: fixed;
+    //height: 90vh;
+    //padding-top: 60px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    @include respond-to(md){
+        font-size:32px;
+    }
+    .rwd_bg{
+        width: 100%;
+        // left:50%;
+        // top: 50%;
+        // transform: translate(-50%,-50%);
+        z-index:1;
+        display: block;
+        img{
+            width: 100%;
+        }
+    }
+    .container{
+            position:absolute;
+            left:50%;
+            bottom:5%;
+            transform: translateX(-50%);
+            z-index:10;
+            @include respond-to(px600){
+                font-size:32px;
+                position: relative;
+                left:unset;
+                transform:unset;
+            }
+    }
+    .content{
+        .text{
+            @include respond-to(px600){
+                margin-top: 60px;
+            }
+            h3{
+                font-size:27px;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-weight:600;
+                margin: 0;
+                @include respond-to(px600){
+                    font-size:21px;
+                }
+            }
+            .eng_title{
+                font-size:21px;
+                margin-bottom: 20px;
+                line-height: 1;
+                font-weight:500;
+                font-family:'Yanone Kaffeesatz', sans-serif;
+                @include respond-to(px600){
+                    font-size:18px;
+                }
+            }
+            p{
+                font-size:14px;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-weight: 300;
+                text-align: justify;
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+    // .pics{
+    //     .page{
+    //             position: relative;
+    //             margin-top:30px;
+    //             padding-top: 20px;
+    //             padding-bottom: 90px;
+    //             @include respond-to(px600){
+    //                 padding-top:calc(20px*0.7);
+    //             }
+    //             @include respond-to(ss){
+    //                 padding-top:calc(20px*0.5);
+    //             }
+    //     }
+    // }
+    
+}
