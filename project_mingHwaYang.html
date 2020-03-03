@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Dollhouse</title>
-    <link rel="stylesheet" href="css/m.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/drift.css">
     <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -15,31 +17,38 @@
 </head>
 <body>
     
-    <nav>
-        <h1><a href="index.html"><img src="https://fakeimg.pl/50x50/"></a></h1>
-
-        <ul class="main_options">
-            <li><a href="#" class="option">project</a></li>
-            <li><a href="#" class="option">about</a></li>
-        </ul>
-        <p class="clean"></p>
-    </nav>
-    <section class="title_intro">
+    <div class="navbar-fixed" style="width: 100%;">
+        <nav class="z-depth-0 navbar white">
+          <div class="nav-wrapper ">
+            <a href="#" class="brand-logo" style="line-height: 0px;"><img src="http://fakeimg.pl/50x50/282828/EAE0D0/?text=PJCHENder"></a>
+            <a  href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li class="nav-item"><a href="#" class="option black-text">project</a></li>
+              <li class="nav-item"><a href="#" class="option black-text">about</a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="#">project</a></li>
+      <li><a href="#">about</a></li>
+    </ul>
+    <header class="title_intro ">
             <div class="container">
-                <h3>The War of Erythrina flower, Heroine: Jin Niang</h3>
+                <h2>The War of Erythrina flower, Heroine: Jin Niang</h2>
             </div>
-    </section>
+    </header>
     <section class="video">
-            <div class="container_with_pic">
+        <div class="container_with_pic">
                 <video controls>
-                    <source  src="images/comp2_Trim.mp4.mp4" type="video/mp4">
+                    <source  src="images/comp2_Trim.mp4" type="video/mp4">
                 </video>
             </div>
     </section>
     <section class="intro jin">
             <div class="container">
-                    <div class="content">
-                        <div class="pics">
+                    <div class="row content">
+                        <div class="pics col s12 m4 l4">
                             <!-- <img src="images/jin_logo.png" alt="" id="ipad"> -->
                             <p class="sub_title">刺桐花之戰 : 峰火下的台灣歷史</p>
                             
@@ -49,7 +58,7 @@
                                 <li><strong class="info_item">client</strong> <p>明華園玄字戲劇團</p> </li> 
                             </ul>
                         </div>
-                        <div class="text">
+                        <div class="text col s12 m8 l8">
                             <p>歷史小說《刺桐花之戰》，係由東吳大學林建隆教授耗時六年於2013年出版，內容講述1786年台灣反清運動中西拉雅族頭目金娘的故事。在林教授的筆下，金娘成為了林爽文抗清事件中，率領族人力戰滿州統治者的女英雄。</p>
                             <p>《刺桐花之戰》在2013年出版的同年即獲臺北市立大學校長戴遐齡推薦入選國家圖書館百大好書，並於2014年獲巫永福文學獎、2015年由屏東縣政府文化處製作成歌仔戲，由屏東縣明華園玄字戲劇團演出，並於2018年再次搬上大舞台公演。</p>
                             <p>此次設計案與藝質展演行銷整合公司合作。以刺桐花為視覺的基底，以其多層次的紅色為主色調，並將帶有戰火意象的火花煙硝融入，文字輔以兵器的金屬質感與色澤，襯托出戰火斑斕下的台灣歷史與文化主體性。</p>
@@ -101,31 +110,35 @@
             <a href=""><img src="images/instagram-brands.svg" alt=""> </a>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        $(window).ready(function(){
-            var ipad=$('#ipad').width();
-            var macH=$('span.macbook').height();
-            $('span.iphone').width(ipad*0.48);
-            $('div.screen').height(macH*0.8);
-        });
-        $(window).resize(function(){
-            var ipad=$('#ipad').width();
-            var macH=$('span.macbook').height();
-            $('span.iphone').width(ipad*0.48);
-            $('div.screen').height(macH*0.8);
-        });
-        $(window).scroll(function(){
-              var scroll= $(window).scrollTop();
-              if(scroll>0){
-              $('header').css('backgroundColor','#fff');
-              $('header').css('position','fixed');
-              $('header').css('boxShadow','0px 0px 5px rgba(0,0,0,0.2)');
-              }
-              else if(scroll==0){
-              $('header').css('backgroundColor','rgba(255,255,255,0)');
-              $('header').css('position','relative'); 
-              $('header').css('boxShadow','none');
-              }
+        // $(window).ready(function(){
+        //     var ipad=$('#ipad').width();
+        //     var macH=$('span.macbook').height();
+        //     $('span.iphone').width(ipad*0.48);
+        //     $('div.screen').height(macH*0.8);
+        // });
+        // $(window).resize(function(){
+        //     var ipad=$('#ipad').width();
+        //     var macH=$('span.macbook').height();
+        //     $('span.iphone').width(ipad*0.48);
+        //     $('div.screen').height(macH*0.8);
+        // });
+        // $(window).scroll(function(){
+        //       var scroll= $(window).scrollTop();
+        //       if(scroll>0){
+        //       $('header').css('backgroundColor','#fff');
+        //       $('header').css('position','fixed');
+        //       $('header').css('boxShadow','0px 0px 5px rgba(0,0,0,0.2)');
+        //       }
+        //       else if(scroll==0){
+        //       $('header').css('backgroundColor','rgba(255,255,255,0)');
+        //       $('header').css('position','relative'); 
+        //       $('header').css('boxShadow','none');
+        //       }
+        // });
+        $(document).ready(function(){
+          $('.sidenav').sidenav();
         });
         
         

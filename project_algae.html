@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/m.css">
-    <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/algae.css">
+    <link rel="stylesheet" href="css/animation.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script
   src="https://code.jquery.com/jquery-3.4.1.js"
@@ -36,28 +36,27 @@
     <section class="title_intro title_intro_algae">
         <span class="tri"></span>
         <div class="container">
-            <div class="row">
+            <div class="row valign-wrapper">
                 <div class="col s12 m8">
-                    <h3 id="algae_main_title">Algae <br><span>A Fun and Free Social Media</span></h3>
+                    <h2 id="algae_main_title">Algae <br><span>A Fun and Free Social Media</span></h2>
                     <h4 style="font-size: 12px;">2019 UI Design</h4>
                 </div>
                 <div class="pics col s12 m4">
-                    <img src="images/mobileAsset 2.png" alt="" class="movefrombottom">
+                    <img src="images/mobileAsset 2.png" alt="">
                 </div>
 
             </div>
-            
         </div>
     </section>
     <section class="intro intro_algae">
             <div class="container" id="container">
                     <div class="content">
                         <div class="text">
-                            <img src="images/algae-logo.png" alt="" style="margin-bottom:30px;">
+                            <img src="images/algae-logo.png" alt="">
                             <h3>關於問問藍綠藻</h3>
-                            <p>此專案與Super方工作室合作，致力於開發實用且饒富遊戲趣味的線上平台/App，透過累積能量解鎖不同腳色的遊戲機制，讓使用者增加使用平台發言互動的意願，同時，輔以交友軟體的功能，提高黏著度。期盼未來能進一步成為具規模的意見與風向平台。</p>
+                            <p>此專案與Super方工作室合作，致力於開發實用且饒富遊戲趣味的線上平台/App，透過累積能量解鎖不同腳色的遊戲機制，讓使用者增加使用平台發言互動的意願，同時，輔以交友軟體的功能，提高黏著度。期盼未來能進一步成為具規模的意見與風向平台。</p><br>
                             <p>在此專案中，我主要協作與負責的部分為網站與app介面設計，以及視覺設計。簡單易上手為此平台的訴求，因此降低年齡限制是設計的主要方針，透過...減少使用者使用的學習曲線，讓不同年齡層的意見交流不再有所限制。</p>
-                           
+                        
                         </div>
                     </div>
                     
@@ -66,7 +65,7 @@
     <div class="researching">
         <span class="tri-b"></span>
         <div class="container">
-        <div class="content">
+        <div class="content analyzing">
             <div class="text">
                 <h3>競爭者與市場分析</h3>
                 <p>台灣目前規模最大的本土匿名社群平台為PTT，同性質的匿名交友社群Dcard則因為目標族群明確，所以受眾有限，但仍蓬勃興起當中。PTT自前年的網軍事件後，已不再受理新用戶的申請，且逾一年之久，這意味著龐大的市場將逐步被釋出。而隨著大選與各項政治活動的熱潮，同時也帶來了大量的社群議題討論空間。</p>
@@ -96,8 +95,10 @@
             <div class="content">
                 <div class="text">
                     <h3>特色與功能</h3>
-                    <p>台灣目前規模最大的本土匿名社群平台為PTT，同性質的匿名交友社群Dcard則因為目標族群明確，所以受眾有限，但仍蓬勃興起當    中。PTT自前年的網軍事件後，已不再受理新用戶的申請，且逾一年之久，這意味著龐大的市場將逐步被釋出。而隨著大選與各項政治活    動的熱潮，同時也帶來了大量的社群議題討論空間。</p>
-                    <div class="features">
+                    <p>台灣目前規模最大的本土匿名社群平台為PTT，同性質的匿名交友社群Dcard則因為目標族群明確，所以受眾有限，但仍蓬勃興起當中。PTT自前年的網軍事件後，已不再受理新用戶的申請，且逾一年之久，這意味著龐大的市場將逐步被釋出。而隨著大選與各項政治活    動的熱潮，同時也帶來了大量的社群議題討論空間。</p>
+                    
+                </div>
+                <div class="features">
                         <div class="features_content">
                             <img src="https://fakeimg.pl/200x200/1F7595,128/000,255">
                             <p>匿名制的社群平台，使用者可隨心所欲發問與表達自己的看法。</p>
@@ -110,7 +111,6 @@
                             <img src="https://fakeimg.pl/200x200/1F7595,128/000,255">
                             <p>透過發表意見增加交友機會，讓平台內容與互動行成良性循環。</p>
                         </div>
-                    </div>
                 </div>
             </div>
        </div>
@@ -250,7 +250,7 @@
 
     <script src="js/animation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </body>
+
     <script>
         $(window).ready(function(){
             var ipad=$('#ipad').width();
@@ -266,6 +266,11 @@
             $('.sidenav').sidenav();
             
             
+            if($(window).width()<600||$(window).width()==600){
+                $('.title_intro>.container>.row').removeClass('valign-wrapper');
+            }else{
+                    $('.title_intro>.container>.row').addClass('valign-wrapper');
+                };
             $(window).scroll(function(){
                 $("nav.navbar").toggleClass("hide",$(window).scrollTop()>zero);
                 zero=$(window).scrollTop();
@@ -278,6 +283,11 @@
                 $('span.iphone').width(ipad*0.48);
                 $('div.screen').height(macH*0.8);
                 $('video.get_chance_mockup').width(iphoneMockup*0.83);
+                if($(window).width()<600||$(window).width()==600){
+                    $('.title_intro>.container>.row').removeClass('valign-wrapper');
+                }else{
+                    $('.title_intro>.container>.row').addClass('valign-wrapper');
+                }
             });
     </script>
     <script>

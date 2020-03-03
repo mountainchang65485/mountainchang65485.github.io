@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Dollhouse</title>
-    <link rel="stylesheet" href="css/m.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/drift.css">
     <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -14,18 +16,25 @@
 </head>
 <body style="background-color: #F0E7DE;">
     
-    <nav>
-        <h1><a href="index.html"><img src="https://fakeimg.pl/50x50/"></a></h1>
-
-        <ul class="main_options">
-            <li><a href="#" class="option">project</a></li>
-            <li><a href="#" class="option">about</a></li>
-        </ul>
-        <p class="clean"></p>
-</nav>
+    <div class="navbar-fixed" style="width: 100%;">
+        <nav class="z-depth-0 navbar" style="background-color: #F0E7DE;">
+          <div class="nav-wrapper ">
+            <a href="#" class="brand-logo" style="line-height: 0px;"><img src="http://fakeimg.pl/50x50/282828/EAE0D0/?text=PJCHENder"></a>
+            <a  href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li class="nav-item"><a href="#" class="option black-text">project</a></li>
+              <li class="nav-item"><a href="#" class="option black-text">about</a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="#">project</a></li>
+      <li><a href="#">about</a></li>
+    </ul>
     <section class="title_intro">
             <div class="container">
-                <h3 style="color: #a0724a;">The Dollhouse: A Picture Book for Character Education</h3>
+                <h2 style="color: #a0724a;">The Dollhouse: A Picture Book for Character Education</h2>
             </div>
     </section>
     <!-- <section class="title_pic">
@@ -37,15 +46,16 @@
     </section> -->
     <section class="intro">
             <div class="container">
-                    <!-- <p>此專案為RE紅包兩週年慶活動，以簡單易上手的互動小遊戲吸引使用者的目光，透過遊戲贈予使用者現金回饋與等值RE店家之服務，驅使消費者增加使用平台點數的意願，提高黏著度。</p> -->
-                    <!-- <p class="eng">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad illo sed quae sequi odio in repellendus incidunt animi, excepturi quibusdam similique dolorum deserunt, aperiam corporis vero. Ipsa, explicabo! Recusandae, beatae.</p> -->
-                    <div class="content" style="margin-bottom:60px; margin-top:0px;">
-                        <div class="pics">
+                    <div class="row content" style="margin-bottom:60px; margin-top:0px;">
+                        <div class="pics col s12 m6 l6">
                             <img src="images/re_land_mockup_ipad.png" alt="" id="ipad">
-                            <span class="iphone"><img src="images/re_land_mockup.png" alt=""></span>
                         </div>
-                        <div class="text"  style="color: #a0724a;">
-                            <p>在此專案中，主要負責的工作為遊戲的介面設計與流程規劃，以及各個頁面的切版，此外，依據不同行銷需求製作周邊宣傳視覺設計。</p>
+                        <div class="text col s12 m6 l6"  style="color: #a0724a;">
+                            <ul class="info">
+                                <li><strong class="info_item">role</strong><p>graphic design</p> </li> 
+                                <li><strong class="info_item">agency</strong><p>華書慈善基金會</p> </li> 
+                            </ul>
+                            <p>在此專案中，主要負責協助公司製作小學英語教育的專案，規劃英語教材與品格教育的內容與視覺設計。教材目前供台北市與新北市共五所國民小學入校使用。由專業的英語教師帶領，透過教材中的視覺藝術、表演、科學與生活等領域單元培養學童的多元品格。</p>
                             <!-- <p class="eng">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad illo sed quae sequi odio in repellendus incidunt animi, excepturi quibusdam similique dolorum deserunt, aperiam corporis vero. Ipsa, explicabo! Recusandae, beatae.</p> -->
                         </div>
 
@@ -95,7 +105,15 @@
                 </div>
             </div>
     </section>
-    <footer></footer>
+    <footer>
+        <div class="icon_wrap">
+            <a href=""><img src="images/envelope-regular (1).svg" alt=""> </a>
+            <a href=""><img src="images/github-brands.svg" alt=""> </a>
+            <a href=""><img src="images/linkedin-in-brands.svg" alt=""> </a>
+            <a href=""><img src="images/instagram-brands.svg" alt=""> </a>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         $(window).ready(function(){
             var ipad=$('#ipad').width();
@@ -109,18 +127,21 @@
             $('span.iphone').width(ipad*0.48);
             $('div.screen').height(macH*0.8);
         });
-        $(window).scroll(function(){
-              var scroll= $(window).scrollTop();
-              if(scroll>0){
-              $('header').css('backgroundColor','#fff');
-              $('header').css('position','fixed');
-              $('header').css('boxShadow','0px 0px 5px rgba(0,0,0,0.2)');
-              }
-              else if(scroll==0){
-              $('header').css('backgroundColor','rgba(255,255,255,0)');
-              $('header').css('position','relative'); 
-              $('header').css('boxShadow','none');
-              }
+        // $(window).scroll(function(){
+        //       var scroll= $(window).scrollTop();
+        //       if(scroll>0){
+        //       $('header').css('backgroundColor','#fff');
+        //       $('header').css('position','fixed');
+        //       $('header').css('boxShadow','0px 0px 5px rgba(0,0,0,0.2)');
+        //       }
+        //       else if(scroll==0){
+        //       $('header').css('backgroundColor','rgba(255,255,255,0)');
+        //       $('header').css('position','relative'); 
+        //       $('header').css('boxShadow','none');
+        //       }
+        // });
+        $(document).ready(function(){
+          $('.sidenav').sidenav();
         });
         
         
