@@ -212,6 +212,9 @@ textarea {
 /*傾斜*/
 /*filter*/
 /*css*/
+body {
+  background-color: #F8F8F2; }
+
 .title_pic_algae {
   max-width: 960px;
   margin: auto; }
@@ -222,6 +225,12 @@ textarea {
     .container {
       width: 100% !important;
       padding: 0px 20px; } }
+
+.text p {
+  font-size: 15px; }
+  @media screen and (max-width: 600px) {
+    .text p {
+      font-size: 14px; } }
 
 .title_intro_algae {
   background-color: #E8DED0;
@@ -251,8 +260,8 @@ textarea {
   background-color: #1F7595;
   margin-top: 0px;
   position: relative;
-  padding-bottom: 60px;
-  padding-top: 60px; }
+  padding-bottom: 80px;
+  padding-top: 80px; }
   .intro_algae .pics {
     margin-right: 0px;
     display: flex;
@@ -273,7 +282,9 @@ textarea {
     justify-content: center;
     text-align: justify;
     max-width: 600px;
-    margin: auto; }
+    margin: auto;
+    padding-bottom: 80px;
+    padding-top: 80px; }
     .intro_algae .text img {
       max-width: 300px !important;
       margin: auto;
@@ -302,8 +313,8 @@ textarea {
   z-index: -1; }
 
 .researching {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
+  padding-top: 80px;
   position: relative;
   background-color: #E8DED0;
   color: #b28a61; }
@@ -311,12 +322,15 @@ textarea {
     margin-top: 0px !important;
     font-size: 16px;
     font-weight: 600; }
-  .researching .analyzing .text {
-    max-width: 600px;
-    margin: auto;
-    margin-bottom: 30px; }
-    .researching .analyzing .text p {
-      text-align: justify; }
+  .researching .analyzing {
+    padding-bottom: 80px;
+    padding-top: 80px; }
+    .researching .analyzing .text {
+      max-width: 600px;
+      margin: auto;
+      margin-bottom: 30px; }
+      .researching .analyzing .text p {
+        text-align: justify; }
   .researching .tri-b {
     width: 100%;
     height: 30px;
@@ -329,21 +343,35 @@ textarea {
     right: 0px;
     z-index: -10; }
   .researching #myChart {
-    margin-bottom: 60px; }
-  .researching .competition .text {
-    max-width: 600px;
-    margin: auto;
-    margin-bottom: 30px; }
-    .researching .competition .text p {
-      text-align: justify; }
+    margin-bottom: 80px; }
+  .researching .competition {
+    padding-bottom: 80px;
+    padding-top: 80px; }
+    .researching .competition .text {
+      max-width: 600px;
+      margin: auto;
+      margin-bottom: 80px; }
+      .researching .competition .text p {
+        text-align: justify; }
 
 .feature {
-  color: #1F7595; }
+  color: #1F7595;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+  .feature .text {
+    max-width: 600px;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: justify; }
+    .feature .text h3 {
+      margin-top: 0px !important;
+      font-size: 16px;
+      font-weight: 600; }
   .feature .features {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 30px; }
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin: 80px -10px; }
     @media screen and (max-width: 600px) {
       .feature .features {
         flex-direction: column; } }
@@ -354,49 +382,37 @@ textarea {
         .feature .features_content {
           width: 100%;
           margin-bottom: 30px; } }
-      .feature .features_content img {
-        margin-bottom: 20px; }
+      .feature .features_content video {
+        width: 100%; }
       .feature .features_content p {
         text-align: center; }
 
 .function {
   background-color: #E8DED0;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  overflow: hidden; }
   @media screen and (max-width: 600px) {
     .function {
       flex-direction: column; } }
-  .function .container_left {
-    padding-right: 0px; }
+  .function .slide .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
     @media screen and (max-width: 600px) {
-      .function .container_left {
-        padding: 30px; } }
-  .function .container_right {
-    padding-left: 0px; }
-    @media screen and (max-width: 600px) {
-      .function .container_right {
-        padding: 30px; } }
+      .function .slide .row {
+        flex-direction: column; } }
+    .function .slide .row .content {
+      padding: 0px 0px 0px 40px;
+      text-align: justify; }
+      @media screen and (max-width: 960px) {
+        .function .slide .row .content {
+          padding: 0px 0px 0px 40px; } }
+      @media screen and (max-width: 600px) {
+        .function .slide .row .content {
+          padding: 0px; } }
   .function .content {
     margin-top: 0px; }
-  .function .pics {
-    display: flex;
-    justify-content: center;
-    padding: 30px 0px;
-    margin-bottom: 0px; }
-    @media screen and (max-width: 600px) {
-      .function .pics {
-        padding-top: 0px; } }
-    .function .pics img {
-      width: 50%; }
-      @media screen and (max-width: 1450px) {
-        .function .pics img {
-          width: 60%; } }
-      @media screen and (max-width: 1000px) {
-        .function .pics img {
-          width: 60%; } }
-      @media screen and (max-width: 768px) {
-        .function .pics img {
-          width: 70%; } }
   .function h3 {
     display: flex;
     flex-direction: row;
@@ -419,14 +435,22 @@ textarea {
         padding: 30px; } }
 
 .friends {
-  background-color: #fff; }
+  background-color: transparent; }
+  .friends .text {
+    max-width: 600px;
+    margin: auto; }
 
 .upGrade {
-  background-color: #fff; }
+  background-color: transparent; }
+  .upGrade .text {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 80px; }
   .upGrade .pics {
     display: flex;
     flex-direction: row;
-    justify-content: center; }
+    justify-content: center;
+    margin-bottom: 80px; }
     @media screen and (max-width: 600px) {
       .upGrade .pics {
         flex-direction: column; } }
