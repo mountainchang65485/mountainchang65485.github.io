@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script>
+        function changesrc() {    
+           document.getElementById("iframe1").src = document.getElementById("addr").value; 
+        } 
+    </script>
+<body>
+     
+	<form> 
+    	<input type="text" id="addr" value="http://itgroup.blueshop.com.tw/inmarkblue/markshu"> 
+    	<input type="button" value="send" onClick="changesrc();"> 
+    </form> 
+    	 
+        <iframe src="http://www.yahoo.com.tw" id="iframe1" width="600px" height="400px"> 
+            
+</body>
+</html>

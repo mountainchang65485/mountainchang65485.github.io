@@ -1,35 +1,145 @@
 @import "default";
 @import "mixins";
 @import "component";
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional');
-.col{
-    padding: 0px !important;
-}
+// .title_pic_re_event{
+//     background:url(../images/ribbon_lg.svg),linear-gradient(120deg, #0AD7F4 0%, #B690E9 45%, #FFD1AF 100%);
+//     background-repeat:repeat-y;
+//     background-attachment: fixed;
+//     .cover{
+//         max-width:1200px;
+//         margin: auto;
+//     }
+// }
 
-.title_pic_re_event{
-    background:url(../images/ribbon_lg.svg),linear-gradient(120deg, #0AD7F4 0%, #B690E9 45%, #FFD1AF 100%);
-    background-repeat:repeat-y;
-    background-attachment: fixed;
-    .cover{
-        max-width:1200px;
-        margin: auto;
+ /* ======================================================== */
+
+ .button_container {
+    position: relative;
+    display: block;
+    height:8px;
+    width: 20px;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity .25s ease;
+    span {
+        left: 50%;
+        transform: translateX(-50%);
+        background: #0C26B4;
+        border: none;
+        height:2px;
+        width: 100%;
+        position: absolute;
+        transition: all .35s ease;
+        cursor: pointer;
+        transform-origin: center;
+      }
+  }
+  .button_container:hover {
+    opacity: .7;
+  }
+  .top{ 
+    top: 0px;
+  }
+  .bottom{ 
+    bottom: 0px;
+  }
+  .button_container.active-burger .top {
+    top:50%;
+    left:50%;
+    transform-origin: center;
+    -webkit-transform: translateY(-50%) translateX(-50%) rotate(45deg);
+            transform: translateY(-50%) translateX(-50%) rotate(45deg);
+
+    background: #fff !important;
+  }
+  .button_container.active-burger .bottom {
+    left: 50%;
+    top:50%;
+    -webkit-transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+            transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+    margin-top:0px;
+    background: #fff !important;
+  }
+  
+  .burger-wrap{
+    z-index: 1000;
+  }
+  
+  .overlay {
+    position: fixed;
+    background:black;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    opacity: 0%;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    color: #fff;
+     .overlay-wrap{
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        @include respond-to(px640){
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+        h1{
+            img{
+                width:100px;
+                @include respond-to(px480){
+                    width:30vw;
+                }
+            }
+        }
+        ul{
+            li{
+                a{
+                   color: #fff !important; 
+                   font-size: 5vw;
+                }
+            }
+        }
+
+     }
+  }
+  .overlay.open {
+    position: fixed;
+    background:rgba(0, 0, 0, 1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    z-index: 25;
+  }
+  
+  @-webkit-keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%;
     }
-}
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
 
+ /* ======================================================== */
 .intro{
-    .row{
-        margin-top: 60px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        @include respond-to(px768){
-            margin:auto;
-            margin-bottom: 20px;
-            margin-top: 30px;
-        }
-        @include respond-to(px600){
-            flex-direction:column;
-        }
         .pics{
             // margin-right:90px;
             position: relative;
@@ -37,177 +147,119 @@
                 @include respond-to(px768){
                     margin:auto;
                     margin-bottom: 20px;
-                    // margin-top: 30px;
                 }
 
             }
         }
         .text{
             text-align: justify;
-            padding-left: 30px !important;
-            font-size: 14px;
-            font-weight:300;
-            @include respond-to(px600){
+            @include respond-to(px640){
                 padding-left:0px !important;
             }
         }
-    }
-
 }
 
 .about_game{
-    padding-top: 60px;
-    .text_title{
-        h3{
-            font-size:36px;
-            font-family: 'Noto Sans TC', sans-serif;
-            font-weight:500;
-            margin: 0;
-            @include respond-to(px600){
-                font-size:32px;
-            }
-        }
-        .eng_title{
-            font-size:21px;
-            margin-bottom: 20px;
-            line-height: 1;
-            font-weight:500;
-            font-family:'Yanone Kaffeesatz', sans-serif;
-            @include respond-to(px600){
-                font-size:24px;
-            }
-        }
-    }
-    .pj_info{
-        font-size:14px;
-        font-family: 'Noto Sans TC', sans-serif;
-        font-weight:300;
+    .pj_intro{
         text-align: justify;
         display:block;
         display: none;
         @include respond-to(px768){
             display:block;
         }
+        p{
+           font-size:15px;
+           font-family: 'Noto Sans TC', sans-serif;
+           font-weight:500;
+           margin-bottom: 10px;
+           line-height:1.6;
+        }
     }
     .content{
-        
         .text{
-            display: flex;
-            flex-direction:row;
-            align-items: center;
-            @include respond-to(px600){
-                // display:block;
+            width: 100%;
+            margin: auto;
+            @include respond-to(px640){
                 flex-direction:column-reverse;
             }
-            
-            p{
-                font-size:14px;
-                font-family: 'Noto Sans TC', sans-serif;
-                font-weight:300;
-                text-align: justify;
-                margin-bottom: 10px;
-            }
-            
-            .pj_info{
+            .pj_intro{
                 display:block;
+                padding-right: 30px;
                 @include respond-to(px768){
                     display:none;
                 }
             }
-                .get_chance{
-                    display: table;
-                    border-collapse:separate;
-                    border-spacing: 10px;
-                    @include respond-to(px600){
-                    }
-            
-                    .get_chance_block{
-                        border-radius: 5px;
-                        padding: 20px 30px;
-                        margin: 0px 5px;
-                        width: 25%;
-                        display: table-cell;
-                        vertical-align: top;
-                        @include respond-to(px768){
-                            padding: 20px 10px;
-                            text-align: center;
-                        }
-                    }
-                    
-                    .get_chance_script{
-                        width: 100%;
-                        margin: 0px;
-                        font-size:12px;
-                        text-align:center;
-                        @include respond-to(px600){
-                            text-align:left;
-                            margin-top: 10px;
-                            text-align:center;
-                        }
-                    }
-                    .get_chance_icon{
-                        display:block;
-                        text-align: center;
-                        margin-bottom: 20px;
-                        @include respond-to(px600){
-                            display: inline-block;
-                            vertical-align: middle;
-                            margin-bottom: 0px;
-                        }
-                        img{
-                            height: 50px;
-                            @include respond-to(px600){
-                                width: 40px;
-                                vertical-align: middle;
-                            }
-                        }
-                    }
-            
+            .get_chance{
+                display: table;
+                border-collapse:separate;
+                border-spacing: 10px;
+                padding: 0px;
+                @include respond-to(px640){
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                 }
+        
+                .get_chance_block{
+                    border-radius: 5px;
+                    padding: 20px 30px;
+                    margin: 0px 5px;
+                    width: 25%;
+                    display: table-cell;
+                    vertical-align: top;
+                    @include respond-to(px768){
+                        padding: 20px 10px;
+                        text-align: center;
+                    }
+                    @include respond-to(px640){
+                        width: 100%;
+                    }
+                }
+                
+                .get_chance_script{
+                    width: 100%;
+                    margin: 0px;
+                    font-size:12px;
+                    text-align:center;
+                    @include respond-to(px600){
+                        text-align:left;
+                        margin-top: 10px;
+                        text-align:center;
+                    }
+                }
+                .get_chance_icon{
+                    display:block;
+                    text-align: center;
+                    margin-bottom: 20px;
+                    @include respond-to(px600){
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-bottom: 0px;
+                    }
+                    img{
+                        height: 50px;
+                        @include respond-to(px600){
+                            width: 40px;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+        
+            }
             
         }
         .pics{
-            flex:1;
-            display: flex;
-            position: relative;
+            margin: auto;
             overflow: hidden;
-            flex-direction: row;
-            justify-content:flex-end;
-            @include respond-to(px600){
-                display:inline-block;
-                text-align: center; 
-            }
-            .get_chance_video{
-                position:absolute;
-                z-index:-1;
-                //left: 50%;
-                top:50%;
-                transform: translate(-20px,-52%);
-                @include respond-to(px768){
-                    left: 50%;
-                    transform: translate(-49%,-41.5%);
-                }
-               
-                video{
-                    width:100%;
-                }
-            }
             .phone_mockup{
-                //margin: auto;
-                width:260px;
+                margin: auto;
+                max-width:260px;
                 z-index: 10;
                 @include respond-to(px768){
                     margin-bottom:-83px;
+                    width:100%;
                 }
-            }
-            @include respond-to(px768){
-                flex:1;
-                justify-content: center;
-            }
-            @include respond-to(px600){
-                display:block;
-                margin: auto;
-                margin-bottom: 30px;
             }
 
         }
@@ -217,67 +269,34 @@
 
 .start_game{
     .container{
-        padding-top:90px;
-        padding-bottom:90px;
+        // padding-top:90px;
+        // padding-bottom:90px;
         @include respond-to(px600){
             padding-top:30px;
             padding-bottom:30px;
         }
     }
     .content{
-        display: flex;
         flex-direction:row-reverse;
         align-items: center;
-        @include respond-to(px600){
-            display:block;
-        }
         .text{
-            flex:2;
-            padding-left: 60px;
             @include respond-to(px768){
-                flex:1;
-                padding-left:30px;
+                padding-left:30px !important;
             }
-            @include respond-to(px600){
-                flex:1;
-                padding-left:0px;
-            }
-            h3{
-                font-size:36px;
-                font-family: 'Noto Sans TC', sans-serif;
-                margin: 0;
-                @include respond-to(px600){
-                    font-size:32px;
-                }
-            }
-            .eng_title{
-                font-size:27px;
-                margin-bottom: 20px;
-                @include respond-to(px600){
-                    font-size:24px;
-                }
-            }
-            p{
-                font-size:15px;
-                font-family: 'Noto Sans TC', sans-serif;
-                font-weight: 300;
-                text-align: justify;
-                margin-bottom: 10px;
+            @include respond-to(px640){
+                padding-left:0px !important;
             }
         }
         .pics{
-            flex:1;
-            display: flex;
-            img{
+            video{
                 margin: auto;
                 margin-left:0px;
-                width:260px;
-                @include respond-to(px768){
+                max-width:260px;
+                @include respond-to(px992){
                     margin: auto;
                 }
             }
             @include respond-to(px768){
-                flex:1;
                 justify-content: center;
             }
             @include respond-to(px600){
@@ -292,91 +311,42 @@
 .start_game_prize{
     background-color: #eee;
     .container{
-        padding-top:90px;
+        // padding-top:90px;
         padding-bottom: 0px;
     }
     .content{
-        display: flex;
-        flex-direction:row;
         align-items: center;
         @include respond-to(px600){
             display:block;
         }
         .text{
-            flex:2;
             padding-right: 60px;
             @include respond-to(px768){
-                flex:1;
                 padding-right:30px;
             }
             @include respond-to(px600){
-                flex:1;
                 padding-right:0px;
             }
-            h3{
-                font-size:36px;
-                font-family: 'Noto Sans TC', sans-serif;
-                margin: 0;
-                @include respond-to(px600){
-                    font-size:32px;
-                }
-            }
-            .eng_title{
-                font-size:27px;
-                margin-bottom: 20px;
-                @include respond-to(px600){
-                    font-size:24px;
-                }
-            }
             p{
-                font-size:15px;
-                font-family: 'Noto Sans TC', sans-serif;
-                text-align: justify;
-                font-weight:300;
-                margin-bottom: 10px;
                 @include respond-to(px600){
                     margin-bottom: 30px;
                 }
             }
         }
         .pics{
-            flex:1;
-            display: flex;
-            overflow: hidden;
-            position: relative;
             height:420px;
-            img{
-                margin: auto;
+            video{
                 margin-right:0px;
-                width:260px;
-                position: absolute;
-                right: 0px;
-                @include respond-to(px768){
-                    margin: auto;
-                    left: 0px;
-                }
+                max-width:260px;
             }
             @include respond-to(px768){
-                flex:1;
                 justify-content: center;
             }
-            @include respond-to(px600){
-                margin-bottom: 30px;
-            }
-
         }
 
     }
 }
 .log_in_mission{
-    .container{
-        padding-top:90px;
-        padding-bottom:90px;
-        @include respond-to(px600){
-            padding-top:30px;
-            padding-bottom:30px;
-        }
-    }
     .content{
         display: flex;
         flex-direction:row-reverse;
@@ -385,39 +355,16 @@
             display:block;
         }
         .text{
-            flex:2;
-            padding-left: 60px;
             @include respond-to(px768){
-                flex:1;
-                padding-left: 0px;
+                padding-left:30px !important;
             }
-            h3{
-                font-size:36px;
-                font-family: 'Noto Sans TC', sans-serif;
-                margin: 0;
-                @include respond-to(px600){
-                    font-size:32px;
-                }
-            }
-            .eng_title{
-                font-size:27px;
-                margin-bottom: 20px;
-                @include respond-to(px600){
-                    font-size:24px;
-                }
-            }
-            p{
-                font-size:15px;
-                font-family: 'Noto Sans TC', sans-serif;
-                font-weight: 300;
-                text-align: justify;
-                margin-bottom: 10px;
+            @include respond-to(px640){
+                padding-left:0px !important;
             }
         }
         .pics{
-            flex:1;
             display: flex;
-            img{
+            video{
                 margin: auto;
                 margin-left:0px;
                 width:260px;
@@ -426,7 +373,6 @@
                 }
             }
             @include respond-to(px768){
-                flex:1;
                 justify-content: center;
             }
             @include respond-to(px600){
@@ -441,29 +387,7 @@
 
 .landing_page{
     background-color: #eee;
-    padding-top: 60px;
     overflow: hidden;
-    .content{
-        .text{
-            
-            h3{
-                font-size:36px;
-                font-family: 'Noto Sans TC', sans-serif;
-                margin: 0;
-                @include respond-to(px600){
-                    font-size:32px;
-                }
-            }
-            .eng_title{
-                font-size:27px;
-                margin-bottom: 20px;
-                @include respond-to(px600){
-                    font-size:24px;
-                }
-            }
-        }
-
-    }
     .pics{
         .page{
                 position: relative;

@@ -154,6 +154,7 @@ $sdw: 960px; //ssm
 $smw: $mdw+200; // md
 $px992: 992px;//px992
 $px768: 768px;//px768
+$px640: 640px;//px640
 $px600: 600px;//px600
 $px480: 480px;//px480
 $px375: 375px;//px375
@@ -172,6 +173,7 @@ $breakpoints: (
     'ssm': 'screen and (max-width: #{$sdw})',
     'px992': 'screen and (max-width: #{$px992})',
     'px768': 'screen and (max-width: #{$px768})',
+    'px640': 'screen and (max-width: #{$px640})',
     'px600': 'screen and (max-width: #{$px600})',
     'px480': 'screen and (max-width: #{$px480})',
     'px375': 'screen and (max-width: #{$px375})',

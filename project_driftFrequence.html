@@ -5,101 +5,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Dollhouse</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Mountain Chang</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/drift.css">
     <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
     
 </head>
-<body>
-    <div class="navbar-fixed">
-        <nav class="z-depth-0 navbar white">
-          <div class="nav-wrapper ">
-            <a href="#" class="brand-logo" style="line-height: 0px;"><img src="http://fakeimg.pl/50x50/282828/EAE0D0/?text=PJCHENder"></a>
-            <a  href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li class="nav-item"><a href="#" class="option black-text">project</a></li>
-              <li class="nav-item"><a href="#" class="option black-text">about</a></li>
+<body > 
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active"><a href="index.html">Mountain Chang</a></li>
             </ul>
-          </div>
-        </nav>
-    </div>
-    <ul class="sidenav" id="mobile-demo">
-      <li><a href="#">project</a></li>
-      <li><a href="#">about</a></li>
-    </ul>
-    
-    <header class="title_intro container">
-        <div>
-            <h2>The Drifting Frequency<span> : The Arts Exhibition of BFA</span></h2>
         </div>
-    </header>
-    <section class="video">
-            <div class="container_with_pic">
-                <img src="images/drifting_fanscover03.png" alt="">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active nav-options"><a href="#">project</a></li>
+                <li class="uk-active nav-options"><a href="#">about</a></li>
+            </ul>
+        </div>
+        <div class="uk-navbar-right burger-wrap">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active burger uk-button uk-button-default uk-text-middle" type="button" uk-toggle="target: #offcanvas-slide">
+                    <i class="fas fa-grip-lines"></i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="offcanvas-slide" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <h1>Mountain Chang</h1>
+            <div class="uk-navbar">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#">project</a></li>
+                    <li class="uk-active"><a href="#">about</a></li>
+                </ul>
             </div>
-    </section>
-    <section class="intro jin">
-            <div class="container">
-                    <div class="row content">
-                        <div class="pics col s12 m4 l4">
-                            <!-- <img src="images/jin_logo.png" alt="" id="ipad"> -->
-                            <p class="sub_title">以最適切的姿態找回屬於自己的頻率</p>
-                            
-                            <ul class="info">
-                                <li><strong class="info_item">role</strong><p>graphic design</p> </li> 
-                                <li><strong class="info_item">agency</strong><p>國立台灣藝術大學 美術學系</p> </li> 
-                            </ul>
-                        </div>
-                        <div class="text col s12 m8 l8">
+            
+        </div>
+    </div>
+    <header class="title_intro uk-padding-large main_content_wrap">
+            <div class="container" style="margin:auto;">
+                <h3 class=" uk-margin-remove-bottom" >The Drifting Frequency: The Arts Exhibition of BFA</h3>
+                <p class="uk-margin-remove-bottom">2014<span>graphic design</span></p>
+            </div>
+    </header>
+    
+    <main>
+        <section class="video container">
+            <img src="images/drifting_fanscover03.png" alt="">
+        </section>
+        <section class="intro jin main_content_wrap uk-margin-large-top uk-margin-large-bottom">
+                <div class="container">
+                    <div class="content " uk-grid>
+                        <div class="text uk-width-2-3@m">
+                            <!-- <div class="text_title">
+                                <h3>以最適切的姿態找回自己的頻率</h3>
+                                <h3 class="eng_title">Find our own frequency</h3>
+                            </div> -->
                             <p>十九世紀初電報問世，在往後的年歲裡，信紙與墨水溶化消解為符號密碼，一點一劃一停頓。藉由反覆的創作行為，作品遂成一台電報收發器，連結了外在世界與內在心靈。創作者將一條條細長的頻率發射空中，望著它消散於一片訊號海，祝福它被觀眾打撈、被照料、被回應。</p>
                             <p>同時我們也持續攔截漂流中的頻率，分析、重現，長短波長、高低振幅，正確的甚或錯誤的，一切訊息都終將被解碼；何時收，何時放，伴隨著經驗積累，期許能夠透過作品將訊號傳遞的更遠更深，直至宇宙盡頭。但亦有時，信心遭受屏蔽，過多的慾望形成雜訊干擾叫人專注不得，於是一錯再錯，遍尋不著對的頻道，而頻率早已漂離了正軌，難以再度相遇。</p>
                             <p>而此時最急切需要的，莫過於一個合宜的姿勢，以便消除你那喪失重力所帶來的不安定感；舒服自在地漂浮，而那兒正是你的頻道──最後試著相信，所有的訊號都將得到歸屬。如此一來，它們終究會回到你的身邊。</p>
                         </div>
+                        <div class="uk-width-1-3@m uk-flex  uk-flex-right@m">
+                            <ul class="info uk-margin-remove uk-flex-center">
+                                <li class="uk-flex"><strong class="info_item">role</strong><p>graphic design</p> </li> 
+                                <li class="uk-flex"><strong class="info_item">agency</strong><p>國立台灣藝術大學 美術學系</p> </li> 
+                            </ul>
+                        </div>
                     </div>
-            </div>
-    </section>
+                </div>
+        </section>
+        <div class="illus_detail container"><img src="images/drifting_visual04.jpg" alt=""></div>
+        <div class="illus_detail container"><img src="images/drifting_visual05.jpg" alt=""></div>
+        <div class="illus_detail container"><img src="images/drifting_visual03.jpg" alt=""></div>
+        <div class="illus_detail container"><img src="images/drifting_visual01.jpg" alt=""></div>
+        <div class="illus_detail container"><img src="images/drifting_visual02.jpg" alt=""></div>
+
+    </main>
     
-    <section class="illus_detail">
-            <div class="container_with_pic">
-                <div class="cover">
-                    <img src="images/drifting_visual04.jpg" alt="">
-                </div>
-            </div>
-    </section>
-    <section class="illus_detail">
-            <div class="container_with_pic">
-                <div class="cover">
-                    <img src="images/drifting_visual05.jpg" alt="">
-                </div>
-            </div>
-    </section>
-    <section class="illus_detail">
-            <div class="container_with_pic">
-                <div class="cover">
-                    <img src="images/drifting_visual03.jpg" alt="">
-                </div>
-            </div>
-    </section>
-    <section class="illus_detail">
-            <div class="container_with_pic">
-                <div class="cover">
-                    <img src="images/drifting_visual01.jpg" alt="">
-                </div>
-            </div>
-    </section>
-    <section class="illus_detail">
-            <div class="container_with_pic">
-                <div class="cover">
-                    <img src="images/drifting_visual02.jpg" alt="">
-                </div>
-            </div>
-    </section>
-    <footer>
+    <footer class="pj_footer">
         <div class="icon_wrap">
             <a href=""><img src="images/envelope-regular (1).svg" alt=""> </a>
             <a href=""><img src="images/github-brands.svg" alt=""> </a>
@@ -108,6 +100,9 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://kit.fontawesome.com/9e2284b284.js" crossorigin="anonymous"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
     <script>
         // $(window).ready(function(){
         //     var ipad=$('#ipad').width();
@@ -134,12 +129,6 @@
         //       $('header').css('boxShadow','none');
         //       }
         // });
-        
-        $(document).ready(function(){
-          $('.sidenav').sidenav();
-        });
-        
-        
     </script>
     
 </body>

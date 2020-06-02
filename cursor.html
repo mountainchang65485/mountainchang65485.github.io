@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bubble{
+            width: 10rem;
+            height:10rem;
+            position: absolute;
+            transform:translate(-50%,-50%);
+            background-color: #000;
+            border-radius: 50%;
+            transition: 0.3s;
+            transition-timing-function: ease-out;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bubble"></div>
+    <script>
+        var bubble= document.querySelector('.bubble');
+        window.addEventListener('mousemove',cursor);
+        function cursor(e){
+            bubble.style.top=e.pageY+'px';
+            bubble.style.left=e.pageX+'px';
+
+        }
+    //   document.addEventListener('mouseover',e=>{
+    //       bubble.setAttribute('style','top:'+e.pageY+'px;left:'+e.pageX+'px;');
+    //       console.log(bubble);
+    //   })
+    </script>
+    
+</body>
+</html>

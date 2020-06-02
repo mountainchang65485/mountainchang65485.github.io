@@ -3,6 +3,8 @@
 /******************************************/
 /******************************************/
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://use.typekit.net/tez4arj.css");
 * {
   box-sizing: border-box;
   font-family: 'Noto Sans TC', sans-serif; }
@@ -212,6 +214,14 @@ textarea {
 /*傾斜*/
 /*filter*/
 /*css*/
+@font-face {
+  font-family: 'droid';
+  src: url(../fonts/droid.ttf); }
+
+@font-face {
+  font-family: 'ostrich';
+  src: url(../fonts/ostrich-sans-condensed-light.ttf); }
+
 .clean {
   clear: both; }
 
@@ -219,312 +229,449 @@ textarea {
   transform: translateY(-100%);
   transition: 0.5s; }
 
-h3 {
-  font-family: 'Noto Sans TC', sans-serif; }
-
-.col {
-  padding: 0px !important; }
-
-.title_pic_re_event {
-  background: url(../images/ribbon_lg.svg), linear-gradient(120deg, #0AD7F4 0%, #B690E9 45%, #FFD1AF 100%);
-  background-repeat: repeat-y;
-  background-attachment: fixed; }
-  .title_pic_re_event .cover {
-    max-width: 1200px;
-    margin: auto; }
-
-.intro .row {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: row;
-  align-items: center; }
-  @media screen and (max-width: 768px) {
-    .intro .row {
-      margin: auto;
-      margin-bottom: 20px;
-      margin-top: 30px; } }
-  @media screen and (max-width: 600px) {
-    .intro .row {
-      flex-direction: column; } }
-  .intro .row .pics {
-    position: relative; }
+nav {
+  position: fixed;
+  font-weight: 700 !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important; }
+  @media screen and (max-width: 640px) {
+    nav {
+      padding-left: 20px !important;
+      padding-right: 20px !important; } }
+  nav a {
+    padding-right: 0px  !important;
+    padding-left: 0px  !important;
+    color: #0C26B4 !important; }
+  nav .nav-options {
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 30px !important; }
     @media screen and (max-width: 768px) {
-      .intro .row .pics #ipad {
-        margin: auto;
-        margin-bottom: 20px; } }
-  .intro .row .text {
-    text-align: justify;
-    padding-left: 30px !important;
-    font-size: 14px;
-    font-weight: 300; }
-    @media screen and (max-width: 600px) {
-      .intro .row .text {
-        padding-left: 0px !important; } }
+      nav .nav-options {
+        display: none; } }
+  nav .nav-options::before {
+    transition: 0.3s;
+    top: 50%;
+    transform: translateY(-50%); }
+  nav .nav-options:hover::before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #0C26B4;
+    position: absolute;
+    animation: navLine 0.3s; }
 
-.about_game {
-  padding-top: 60px; }
-  .about_game .text_title h3 {
-    font-size: 36px;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-weight: 500;
-    margin: 0; }
-    @media screen and (max-width: 600px) {
-      .about_game .text_title h3 {
-        font-size: 32px; } }
-  .about_game .text_title .eng_title {
-    font-size: 21px;
-    margin-bottom: 20px;
-    line-height: 1;
-    font-weight: 500;
-    font-family: 'Yanone Kaffeesatz', sans-serif; }
-    @media screen and (max-width: 600px) {
-      .about_game .text_title .eng_title {
-        font-size: 24px; } }
-  .about_game .pj_info {
-    font-size: 14px;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-weight: 300;
-    text-align: justify;
-    display: block;
+@keyframes navLine {
+  0% {
+    width: 0px; }
+  100% {
+    width: 100%; } }
+  nav .burger-wrap {
     display: none; }
     @media screen and (max-width: 768px) {
-      .about_game .pj_info {
-        display: block; } }
-  .about_game .content .text {
+      nav .burger-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
+    nav .burger-wrap ul li {
+      border: none !important;
+      background-color: none !important;
+      padding-left: 0px;
+      padding-right: 0px; }
+
+.fa-grip-lines {
+  color: #0C26B4;
+  font-size: 1.5rem; }
+
+#offcanvas-slide {
+  font-family: 'Roboto', sans-serif !important; }
+  #offcanvas-slide h1 {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 900;
+    font-size: 27px; }
+
+.container {
+  max-width: 960px;
+  margin: auto; }
+
+.title_intro h3 {
+  font-style: 'Roboto';
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #0C26B4; }
+  @media screen and (max-width: 1200px) {
+    .title_intro h3 {
+      font-size: 8vw; } }
+  @media screen and (max-width: 640px) {
+    .title_intro h3 {
+      font-size: 10vw; } }
+
+.title_intro p {
+  font-style: 'Roboto';
+  font-size: 15px;
+  font-weight: 900;
+  color: #0C26B4; }
+  .title_intro p span {
+    margin-left: 1rem; }
+
+.text_title h3 {
+  font-size: 27px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+  margin-bottom: 10px;
+  color: #0C26B4; }
+  @media screen and (max-width: 600px) {
+    .text_title h3 {
+      font-size: 24px; } }
+
+.text_title .eng_title {
+  font-size: 21px;
+  margin-bottom: 20px;
+  line-height: 1;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  color: #0C26B4; }
+  @media screen and (max-width: 600px) {
+    .text_title .eng_title {
+      font-size: 18px; } }
+
+.main_content_wrap {
+  padding-left: 40px !important;
+  padding-right: 40px !important; }
+  @media screen and (max-width: 640px) {
+    .main_content_wrap {
+      padding-left: 20px !important;
+      padding-right: 20px !important; } }
+  .main_content_wrap .content .text p {
+    font-size: 15px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    text-align: justify;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #0C26B4; }
+
+.pj_footer {
+  width: 100%;
+  padding-left: 40px !important;
+  padding-right: 40px !important; }
+  @media screen and (max-width: 640px) {
+    .pj_footer {
+      padding-left: 20px !important;
+      padding-right: 20px !important; } }
+  .pj_footer .icon_wrap {
     display: flex;
     flex-direction: row;
-    align-items: center; }
-    @media screen and (max-width: 600px) {
-      .about_game .content .text {
-        flex-direction: column-reverse; } }
-    .about_game .content .text p {
-      font-size: 14px;
-      font-family: 'Noto Sans TC', sans-serif;
-      font-weight: 300;
-      text-align: justify;
-      margin-bottom: 10px; }
-    .about_game .content .text .pj_info {
-      display: block; }
-      @media screen and (max-width: 768px) {
-        .about_game .content .text .pj_info {
-          display: none; } }
-    .about_game .content .text .get_chance {
-      display: table;
-      border-collapse: separate;
-      border-spacing: 10px; }
-      .about_game .content .text .get_chance .get_chance_block {
-        border-radius: 5px;
-        padding: 20px 30px;
-        margin: 0px 5px;
-        width: 25%;
-        display: table-cell;
-        vertical-align: top; }
-        @media screen and (max-width: 768px) {
-          .about_game .content .text .get_chance .get_chance_block {
-            padding: 20px 10px;
-            text-align: center; } }
-      .about_game .content .text .get_chance .get_chance_script {
-        width: 100%;
-        margin: 0px;
-        font-size: 12px;
-        text-align: center; }
-        @media screen and (max-width: 600px) {
-          .about_game .content .text .get_chance .get_chance_script {
-            text-align: left;
-            margin-top: 10px;
-            text-align: center; } }
-      .about_game .content .text .get_chance .get_chance_icon {
-        display: block;
-        text-align: center;
-        margin-bottom: 20px; }
-        @media screen and (max-width: 600px) {
-          .about_game .content .text .get_chance .get_chance_icon {
-            display: inline-block;
-            vertical-align: middle;
-            margin-bottom: 0px; } }
-        .about_game .content .text .get_chance .get_chance_icon img {
-          height: 50px; }
-          @media screen and (max-width: 600px) {
-            .about_game .content .text .get_chance .get_chance_icon img {
-              width: 40px;
-              vertical-align: middle; } }
-  .about_game .content .pics {
-    flex: 1;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    flex-direction: row;
-    justify-content: flex-end; }
-    @media screen and (max-width: 600px) {
-      .about_game .content .pics {
-        display: inline-block;
-        text-align: center; } }
-    .about_game .content .pics .get_chance_video {
-      position: absolute;
-      z-index: -1;
-      top: 50%;
-      transform: translate(-20px, -52%); }
-      @media screen and (max-width: 768px) {
-        .about_game .content .pics .get_chance_video {
-          left: 50%;
-          transform: translate(-49%, -41.5%); } }
-      .about_game .content .pics .get_chance_video video {
-        width: 100%; }
-    .about_game .content .pics .phone_mockup {
-      width: 260px;
-      z-index: 10; }
-      @media screen and (max-width: 768px) {
-        .about_game .content .pics .phone_mockup {
-          margin-bottom: -83px; } }
-    @media screen and (max-width: 768px) {
-      .about_game .content .pics {
-        flex: 1;
+    max-width: 960px;
+    margin: auto;
+    align-items: center;
+    padding: 40px 0px; }
+    @media screen and (max-width: 640px) {
+      .pj_footer .icon_wrap {
+        padding-left: 20px;
+        padding-right: 20px;
         justify-content: center; } }
-    @media screen and (max-width: 600px) {
-      .about_game .content .pics {
-        display: block;
-        margin: auto;
-        margin-bottom: 30px; } }
+    .pj_footer .icon_wrap a {
+      margin-right: 20px; }
+      .pj_footer .icon_wrap a img {
+        width: 25px; }
+        @media screen and (max-width: 600px) {
+          .pj_footer .icon_wrap a img {
+            width: 22px; } }
 
-.start_game .container {
-  padding-top: 90px;
-  padding-bottom: 90px; }
-  @media screen and (max-width: 600px) {
-    .start_game .container {
-      padding-top: 30px;
-      padding-bottom: 30px; } }
+.info {
+  font-weight: medium;
+  display: inline-block;
+  line-height: 1.5;
+  font-family: "Roboto","Noto Sans TC","Cairo", "SF Pro TC", "SF Pro Text", "PingFang TC",  "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  padding: 0px;
+  color: #0C26B4; }
+  .info li {
+    margin-bottom: 10px; }
+    .info li .info_item {
+      font-weight: lighter;
+      font-size: 13px;
+      margin-right: 10px; }
+    .info li p {
+      margin: 0px !important;
+      font-size: 13px !important;
+      font-weight: 500; }
 
-.start_game .content {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center; }
-  @media screen and (max-width: 600px) {
-    .start_game .content {
+article {
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #0C26B4; }
+
+/* ======================================================== */
+.button_container {
+  position: relative;
+  display: block;
+  height: 8px;
+  width: 20px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease; }
+  .button_container span {
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0C26B4;
+    border: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    transition: all .35s ease;
+    cursor: pointer;
+    transform-origin: center; }
+
+.button_container:hover {
+  opacity: .7; }
+
+.top {
+  top: 0px; }
+
+.bottom {
+  bottom: 0px; }
+
+.button_container.active-burger .top {
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  -webkit-transform: translateY(-50%) translateX(-50%) rotate(45deg);
+  transform: translateY(-50%) translateX(-50%) rotate(45deg);
+  background: #fff !important; }
+
+.button_container.active-burger .bottom {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+  transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+  margin-top: 0px;
+  background: #fff !important; }
+
+.burger-wrap {
+  z-index: 1000; }
+
+.overlay {
+  position: fixed;
+  background: black;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  opacity: 0%;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  color: #fff; }
+  .overlay .overlay-wrap {
+    padding-left: 40px !important;
+    padding-right: 40px !important; }
+    @media screen and (max-width: 640px) {
+      .overlay .overlay-wrap {
+        padding-left: 20px !important;
+        padding-right: 20px !important; } }
+    .overlay .overlay-wrap h1 img {
+      width: 100px; }
+      @media screen and (max-width: 480px) {
+        .overlay .overlay-wrap h1 img {
+          width: 30vw; } }
+    .overlay .overlay-wrap ul li a {
+      color: #fff !important;
+      font-size: 5vw; }
+
+.overlay.open {
+  position: fixed;
+  background: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  z-index: 25; }
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+
+/* ======================================================== */
+.intro .pics {
+  position: relative; }
+  @media screen and (max-width: 768px) {
+    .intro .pics #ipad {
+      margin: auto;
+      margin-bottom: 20px; } }
+
+.intro .text {
+  text-align: justify; }
+  @media screen and (max-width: 640px) {
+    .intro .text {
+      padding-left: 0px !important; } }
+
+.about_game .pj_intro {
+  text-align: justify;
+  display: block;
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .about_game .pj_intro {
       display: block; } }
-  .start_game .content .text {
-    flex: 2;
-    padding-left: 60px; }
+  .about_game .pj_intro p {
+    font-size: 15px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.6; }
+
+.about_game .content .text {
+  width: 100%;
+  margin: auto; }
+  @media screen and (max-width: 640px) {
+    .about_game .content .text {
+      flex-direction: column-reverse; } }
+  .about_game .content .text .pj_intro {
+    display: block;
+    padding-right: 30px; }
     @media screen and (max-width: 768px) {
-      .start_game .content .text {
-        flex: 1;
-        padding-left: 30px; } }
-    @media screen and (max-width: 600px) {
-      .start_game .content .text {
-        flex: 1;
-        padding-left: 0px; } }
-    .start_game .content .text h3 {
-      font-size: 36px;
-      font-family: 'Noto Sans TC', sans-serif;
-      margin: 0; }
+      .about_game .content .text .pj_intro {
+        display: none; } }
+  .about_game .content .text .get_chance {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 10px;
+    padding: 0px; }
+    @media screen and (max-width: 640px) {
+      .about_game .content .text .get_chance {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
+    .about_game .content .text .get_chance .get_chance_block {
+      border-radius: 5px;
+      padding: 20px 30px;
+      margin: 0px 5px;
+      width: 25%;
+      display: table-cell;
+      vertical-align: top; }
+      @media screen and (max-width: 768px) {
+        .about_game .content .text .get_chance .get_chance_block {
+          padding: 20px 10px;
+          text-align: center; } }
+      @media screen and (max-width: 640px) {
+        .about_game .content .text .get_chance .get_chance_block {
+          width: 100%; } }
+    .about_game .content .text .get_chance .get_chance_script {
+      width: 100%;
+      margin: 0px;
+      font-size: 12px;
+      text-align: center; }
       @media screen and (max-width: 600px) {
-        .start_game .content .text h3 {
-          font-size: 32px; } }
-    .start_game .content .text .eng_title {
-      font-size: 27px;
+        .about_game .content .text .get_chance .get_chance_script {
+          text-align: left;
+          margin-top: 10px;
+          text-align: center; } }
+    .about_game .content .text .get_chance .get_chance_icon {
+      display: block;
+      text-align: center;
       margin-bottom: 20px; }
       @media screen and (max-width: 600px) {
-        .start_game .content .text .eng_title {
-          font-size: 24px; } }
-    .start_game .content .text p {
-      font-size: 15px;
-      font-family: 'Noto Sans TC', sans-serif;
-      font-weight: 300;
-      text-align: justify;
-      margin-bottom: 10px; }
-  .start_game .content .pics {
-    flex: 1;
-    display: flex; }
-    .start_game .content .pics img {
-      margin: auto;
-      margin-left: 0px;
-      width: 260px; }
-      @media screen and (max-width: 768px) {
-        .start_game .content .pics img {
-          margin: auto; } }
+        .about_game .content .text .get_chance .get_chance_icon {
+          display: inline-block;
+          vertical-align: middle;
+          margin-bottom: 0px; } }
+      .about_game .content .text .get_chance .get_chance_icon img {
+        height: 50px; }
+        @media screen and (max-width: 600px) {
+          .about_game .content .text .get_chance .get_chance_icon img {
+            width: 40px;
+            vertical-align: middle; } }
+
+.about_game .content .pics {
+  margin: auto;
+  overflow: hidden; }
+  .about_game .content .pics .phone_mockup {
+    margin: auto;
+    max-width: 260px;
+    z-index: 10; }
     @media screen and (max-width: 768px) {
-      .start_game .content .pics {
-        flex: 1;
-        justify-content: center; } }
-    @media screen and (max-width: 600px) {
-      .start_game .content .pics {
-        margin-bottom: 30px; } }
+      .about_game .content .pics .phone_mockup {
+        margin-bottom: -83px;
+        width: 100%; } }
+
+@media screen and (max-width: 600px) {
+  .start_game .container {
+    padding-top: 30px;
+    padding-bottom: 30px; } }
+
+.start_game .content {
+  flex-direction: row-reverse;
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    .start_game .content .text {
+      padding-left: 30px !important; } }
+  @media screen and (max-width: 640px) {
+    .start_game .content .text {
+      padding-left: 0px !important; } }
+  .start_game .content .pics video {
+    margin: auto;
+    margin-left: 0px;
+    max-width: 260px; }
+    @media screen and (max-width: 992px) {
+      .start_game .content .pics video {
+        margin: auto; } }
+  @media screen and (max-width: 768px) {
+    .start_game .content .pics {
+      justify-content: center; } }
+  @media screen and (max-width: 600px) {
+    .start_game .content .pics {
+      margin-bottom: 30px; } }
 
 .start_game_prize {
   background-color: #eee; }
   .start_game_prize .container {
-    padding-top: 90px;
     padding-bottom: 0px; }
   .start_game_prize .content {
-    display: flex;
-    flex-direction: row;
     align-items: center; }
     @media screen and (max-width: 600px) {
       .start_game_prize .content {
         display: block; } }
     .start_game_prize .content .text {
-      flex: 2;
       padding-right: 60px; }
       @media screen and (max-width: 768px) {
         .start_game_prize .content .text {
-          flex: 1;
           padding-right: 30px; } }
       @media screen and (max-width: 600px) {
         .start_game_prize .content .text {
-          flex: 1;
           padding-right: 0px; } }
-      .start_game_prize .content .text h3 {
-        font-size: 36px;
-        font-family: 'Noto Sans TC', sans-serif;
-        margin: 0; }
-        @media screen and (max-width: 600px) {
-          .start_game_prize .content .text h3 {
-            font-size: 32px; } }
-      .start_game_prize .content .text .eng_title {
-        font-size: 27px;
-        margin-bottom: 20px; }
-        @media screen and (max-width: 600px) {
-          .start_game_prize .content .text .eng_title {
-            font-size: 24px; } }
-      .start_game_prize .content .text p {
-        font-size: 15px;
-        font-family: 'Noto Sans TC', sans-serif;
-        text-align: justify;
-        font-weight: 300;
-        margin-bottom: 10px; }
-        @media screen and (max-width: 600px) {
-          .start_game_prize .content .text p {
-            margin-bottom: 30px; } }
+      @media screen and (max-width: 600px) {
+        .start_game_prize .content .text p {
+          margin-bottom: 30px; } }
     .start_game_prize .content .pics {
-      flex: 1;
-      display: flex;
-      overflow: hidden;
-      position: relative;
       height: 420px; }
-      .start_game_prize .content .pics img {
-        margin: auto;
+      .start_game_prize .content .pics video {
         margin-right: 0px;
-        width: 260px;
-        position: absolute;
-        right: 0px; }
-        @media screen and (max-width: 768px) {
-          .start_game_prize .content .pics img {
-            margin: auto;
-            left: 0px; } }
+        max-width: 260px; }
       @media screen and (max-width: 768px) {
         .start_game_prize .content .pics {
-          flex: 1;
           justify-content: center; } }
-      @media screen and (max-width: 600px) {
-        .start_game_prize .content .pics {
-          margin-bottom: 30px; } }
-
-.log_in_mission .container {
-  padding-top: 90px;
-  padding-bottom: 90px; }
-  @media screen and (max-width: 600px) {
-    .log_in_mission .container {
-      padding-top: 30px;
-      padding-bottom: 30px; } }
 
 .log_in_mission .content {
   display: flex;
@@ -533,45 +680,23 @@ h3 {
   @media screen and (max-width: 600px) {
     .log_in_mission .content {
       display: block; } }
-  .log_in_mission .content .text {
-    flex: 2;
-    padding-left: 60px; }
-    @media screen and (max-width: 768px) {
-      .log_in_mission .content .text {
-        flex: 1;
-        padding-left: 0px; } }
-    .log_in_mission .content .text h3 {
-      font-size: 36px;
-      font-family: 'Noto Sans TC', sans-serif;
-      margin: 0; }
-      @media screen and (max-width: 600px) {
-        .log_in_mission .content .text h3 {
-          font-size: 32px; } }
-    .log_in_mission .content .text .eng_title {
-      font-size: 27px;
-      margin-bottom: 20px; }
-      @media screen and (max-width: 600px) {
-        .log_in_mission .content .text .eng_title {
-          font-size: 24px; } }
-    .log_in_mission .content .text p {
-      font-size: 15px;
-      font-family: 'Noto Sans TC', sans-serif;
-      font-weight: 300;
-      text-align: justify;
-      margin-bottom: 10px; }
+  @media screen and (max-width: 768px) {
+    .log_in_mission .content .text {
+      padding-left: 30px !important; } }
+  @media screen and (max-width: 640px) {
+    .log_in_mission .content .text {
+      padding-left: 0px !important; } }
   .log_in_mission .content .pics {
-    flex: 1;
     display: flex; }
-    .log_in_mission .content .pics img {
+    .log_in_mission .content .pics video {
       margin: auto;
       margin-left: 0px;
       width: 260px; }
       @media screen and (max-width: 768px) {
-        .log_in_mission .content .pics img {
+        .log_in_mission .content .pics video {
           margin: auto; } }
     @media screen and (max-width: 768px) {
       .log_in_mission .content .pics {
-        flex: 1;
         justify-content: center; } }
     @media screen and (max-width: 600px) {
       .log_in_mission .content .pics {
@@ -579,21 +704,7 @@ h3 {
 
 .landing_page {
   background-color: #eee;
-  padding-top: 60px;
   overflow: hidden; }
-  .landing_page .content .text h3 {
-    font-size: 36px;
-    font-family: 'Noto Sans TC', sans-serif;
-    margin: 0; }
-    @media screen and (max-width: 600px) {
-      .landing_page .content .text h3 {
-        font-size: 32px; } }
-  .landing_page .content .text .eng_title {
-    font-size: 27px;
-    margin-bottom: 20px; }
-    @media screen and (max-width: 600px) {
-      .landing_page .content .text .eng_title {
-        font-size: 24px; } }
   .landing_page .pics .page {
     position: relative;
     margin-top: 30px;

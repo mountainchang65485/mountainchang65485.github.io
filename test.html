@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        
+        var xmlHttp;
+    
+        function createXMLHttpRequest() {
+            if (window.ActiveXObject) {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            else if (window.XMLHttpRequest) {
+                xmlHttp = new XMLHttpRequest();
+            }
+        }
+    
+        function callback() {
+            if (xmlHttp.readyState == 4) {
+                if (xmlHttp.status == 200) {
+                    document.write(xmlHttp.responseText);
+                } else if (xmlHttp.status == 204){
+                    //xxx();
+                }
+            }
+        }
+        
+        function getPage(url) {
+    
+            createXMLHttpRequest();
+    
+            xmlHttp.open("GET", url, true);
+            xmlHttp.onreadystatechange = callback;
+            xmlHttp.send(null);
+        }
+        
+    
+    </script>
+</body>
+</html>

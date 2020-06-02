@@ -5,104 +5,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Dollhouse</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Mountain Chang</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/drift.css">
     <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
     
 </head>
 <body>
-    
-    <div class="navbar-fixed" style="width: 100%;">
-        <nav class="z-depth-0 navbar white">
-          <div class="nav-wrapper ">
-            <a href="#" class="brand-logo" style="line-height: 0px;"><img src="http://fakeimg.pl/50x50/282828/EAE0D0/?text=PJCHENder"></a>
-            <a  href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li class="nav-item"><a href="#" class="option black-text">project</a></li>
-              <li class="nav-item"><a href="#" class="option black-text">about</a></li>
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left">
+           <a class="uk-navbar-item uk-logo" href="index.html">Mountain Chang</a></li>
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active nav-options"><a href="#">project</a></li>
+                <li class="uk-active nav-options"><a href="#">about</a></li>
             </ul>
-          </div>
-        </nav>
+        </div>
+        <div class="uk-navbar-right burger-wrap">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active burger uk-button uk-button-default uk-text-middle" type="button" uk-toggle="target: #offcanvas-slide"><i class="fas fa-grip-lines" style="font-size:1.5rem;"></i></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="offcanvas-slide" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <h1>Mountain Chang</h1>
+            <div class="uk-navbar">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#">project</a></li>
+                    <li class="uk-active"><a href="#">about</a></li>
+                </ul>
+            </div>
+            
+        </div>
     </div>
-    <ul class="sidenav" id="mobile-demo">
-      <li><a href="#">project</a></li>
-      <li><a href="#">about</a></li>
-    </ul>
-    <header class="title_intro ">
-            <div class="container">
-                <h2>The War of Erythrina flower, Heroine: Jin Niang</h2>
+        <!-- <section class="uk-cover-container uk-height-large">
+            <video  src="images/comp2_Trim.mp4" autoplay loop muted playsinline uk-cover></video>
+        </section> -->
+    <header class="title_intro uk-padding-large main_content_wrap">
+            <div class="container" style="margin:auto;">
+                <h3 class=" uk-margin-remove-bottom">The War of Erythrina flower, Heroine: Jin Niang</h3>
+                <p class="uk-margin-remove-bottom">2018<span>graphic design</span></p>
             </div>
     </header>
-    <section class="video">
-        <div class="container_with_pic">
+    
+    <main>
+        <!-- <section class="video container">
                 <video controls>
                     <source  src="images/comp2_Trim.mp4" type="video/mp4">
                 </video>
-            </div>
-    </section>
-    <section class="intro jin">
-            <div class="container">
-                    <div class="row content">
-                        <div class="pics col s12 m4 l4">
-                            <!-- <img src="images/jin_logo.png" alt="" id="ipad"> -->
-                            <p class="sub_title">刺桐花之戰 : 峰火下的台灣歷史</p>
-                            
-                            <ul class="info">
-                                <li><strong class="info_item">role</strong><p>graphic design</p> </li> 
-                                <li><strong class="info_item">agency</strong><p>ArtWoods 藝質 表演藝術創意行銷</p> </li> 
-                                <li><strong class="info_item">client</strong> <p>明華園玄字戲劇團</p> </li> 
-                            </ul>
-                        </div>
-                        <div class="text col s12 m8 l8">
-                            <p>歷史小說《刺桐花之戰》，係由東吳大學林建隆教授耗時六年於2013年出版，內容講述1786年台灣反清運動中西拉雅族頭目金娘的故事。在林教授的筆下，金娘成為了林爽文抗清事件中，率領族人力戰滿州統治者的女英雄。</p>
-                            <p>《刺桐花之戰》在2013年出版的同年即獲臺北市立大學校長戴遐齡推薦入選國家圖書館百大好書，並於2014年獲巫永福文學獎、2015年由屏東縣政府文化處製作成歌仔戲，由屏東縣明華園玄字戲劇團演出，並於2018年再次搬上大舞台公演。</p>
+        </section> -->
+        <div class="illus_detail container">
+            <!-- <video src="https://vimeo.com/414660184" autoplay loop muted></video> -->
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/414660184" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+        <section class="intro jin main_content_wrap uk-margin-large-top">
+                <div class="container">
+                    <div class="content" uk-grid>
+                        <div class="text uk-width-2-3@m">
+                            <!-- <div class="text_title">
+                                <h3>刺桐花之戰 : 峰火下的台灣歷史</h3>
+                                <h3 class="eng_title">The History of Taiwan</h3>
+                            </div> -->
+                            <p>歷史小說《刺桐花之戰》，係由東吳大學林建隆教授耗時六年於2013年出版，內容講述1786年台灣反清運動中西拉雅族頭目金娘的故事。在林教授的筆下，金娘成為了林爽文抗清事件中，率領族人力戰滿州統治者的女英雄。《刺桐花之戰》在2013年出版的同年即獲臺北市立大學校長戴遐齡推薦入選國家圖書館百大好書，並於2014年獲巫永福文學獎、2015年由屏東縣政府文化處製作成歌仔戲，由屏東縣明華園玄字戲劇團演出，並於2018年再次搬上大舞台公演。</p>
+
                             <p>此次設計案與藝質展演行銷整合公司合作。以刺桐花為視覺的基底，以其多層次的紅色為主色調，並將帶有戰火意象的火花煙硝融入，文字輔以兵器的金屬質感與色澤，襯托出戰火斑斕下的台灣歷史與文化主體性。</p>
                         </div>
+                        <div class="uk-width-1-3@m uk-flex  uk-flex-right@m">
+                            <ul class="info uk-margin-remove uk-flex-center">
+                                <li class="uk-flex"><strong class="info_item">role</strong><p>graphic design</p> </li> 
+                                <li class="uk-flex"><strong class="info_item">client</strong><p>明華園玄字戲劇團</p> </li> 
+                                <li class="uk-flex"><strong class="info_item">agency</strong><p>ArtWoods 藝質表演藝術創意行銷</p> </li> 
+                            </ul>
+                        </div>
                     </div>
-            </div>
-    </section>
-    
-    <section class="illus_detail">
-            <div class="container_with_pic">
-                <div class="cover">
-                    <img src="images/jin_DM02.jpg" alt="">
                 </div>
-            </div>
-    </section>
-    <section class="illus_detail">
-            <div class="container_with_pic">
-                <div class="cover">
-                    <img src="images/jin_poster.jpg" alt="">
-                </div>
-            </div>
-    </section>
-    <section class="illus_detail">
-            <div class="container_with_pic">
-                <div class="cover">
-                    <img src="images/jin_handbook01.jpg" alt="">
-                </div>
-            </div>
-    </section>
-    <section class="illus_detail">
-            <div class="container_with_pic">
-                <div class="cover">
-                    <img src="images/jin_handbook02.jpg" alt="">
-                </div>
-            </div>
-    </section>
-    <section class="illus_detail">
-            <div class="container_with_pic">
-                <div class="cover">
-                    <img src="images/jin_ad.jpg" alt="">
-                </div>
-            </div>
-    </section>
-    <footer>
+        </section>
+        <div class="illus_detail container"> <img src="images/jin_DM02.jpg" alt=""></div>
+        <div class="illus_detail container"><img src="images/jin_poster.jpg" alt=""> </div>
+        <div class="illus_detail container"><img src="images/jin_handbook01.jpg" alt=""></div>
+        <div class="illus_detail container"><img src="images/jin_handbook02.jpg" alt=""></div>
+        <div class="illus_detail container"><img src="images/jin_ad.jpg" alt=""> </div>
+    </main>
+    <footer class="pj_footer">
         <div class="icon_wrap">
             <a href=""><img src="images/envelope-regular (1).svg" alt=""> </a>
             <a href=""><img src="images/github-brands.svg" alt=""> </a>
@@ -110,7 +103,10 @@
             <a href=""><img src="images/instagram-brands.svg" alt=""> </a>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://kit.fontawesome.com/9e2284b284.js" crossorigin="anonymous"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    
     <script>
         // $(window).ready(function(){
         //     var ipad=$('#ipad').width();
@@ -137,9 +133,6 @@
         //       $('header').css('boxShadow','none');
         //       }
         // });
-        $(document).ready(function(){
-          $('.sidenav').sidenav();
-        });
         
         
     </script>

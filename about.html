@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mountain Chang</title>
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/re.css">
+    <link rel="stylesheet" href="css/about.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script> -->
+</head>
+<body>
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active"><a href="index.html">Mountain Chang</a></li>
+            </ul>
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active nav-options"><a href="#">project</a></li>
+                <li class="uk-active nav-options"><a href="#">about</a></li>
+            </ul>
+        </div>
+        <div class="uk-navbar-right burger-wrap" >
+            <ul class="uk-navbar-nav">
+                <li class="uk-active burger uk-button uk-button-default uk-text-middle" type="button">
+                    <!-- <i class="fas fa-grip-lines" style="font-size:1.5rem;"></i> -->
+                    <div class="button_container" id="toggle">
+                        <span class="top"></span>
+                        <span class="bottom"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="overlay uk-padding-small uk-padding-remove-horizontal" id="overlay">
+            <div class="overlay-wrap">
+                <!-- <button class=" uk-offcanvas-close" type="button" uk-close></button> -->
+                <h1><img src="images/mt-logo02.svg" alt=""></h1>
+                    <ul class="uk-nav uk-nav-default uk-nav-parent-icon" uk-nav>
+                        <li class="uk-parent">
+                            <a href="#">project</a>
+                            <ul class="uk-nav-sub">
+                                <li><a href="#">Sub item</a></li>
+                                <li><a href="#">Sub item</a></li>
+                                <li><a href="#">Sub item</a></li>
+                                <li><a href="#">Sub item</a></li>
+                                <li><a href="#">Sub item</a></li>
+                                <li><a href="#">Sub item</a></li>
+                            </ul>
+                        </li>
+                        <li class="uk-active">
+                            <a  href="javascript:;">about</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="title_intro uk-padding-large main_content_wrap">
+            <div class="container" style="margin:auto;">
+                <h3 class=" uk-margin-remove-bottom">Hi! My name is Mountain Chang!</h3>
+                <!-- <p class="uk-margin-remove-bottom">1992<span>Taipei, Taiwan</span></p> -->
+            </div>
+    </header>
+
+    <main>
+        <div class="main_content_wrap">
+            <section class="container">
+                <div class=" article_wrap" uk-grid> 
+                    <div class="scroll-img" id="scroll-element" >
+                       <img src="images/IMG_1237_b.jpg" alt="">
+                    </div>
+                    <article class="uk-width-2-3@s uk-width-1-2@m uk-margin-large-bottom">I'm a designer based in Taipei, Taiwan. I graduated from National Taiwan University of Arts, majored in fine arts and mainly focus on photography, mix media installations and graphic design.</article>
+                   
+                </div>
+                <div class="article_wrap uk-flex uk-flex-right" uk-grid>
+                    <article class="uk-width-5-6@s uk-width-2-3@m uk-width-2-3@l uk-margin-large-bottom">Most of my works are inspired from life experience. Especially on the memory of my family, self-awareness, people and land, life and death. I transfer my life experience into the key element of my works.</article>
+                </div>
+                <div class="article_wrap uk-flex uk-flex-right" uk-grid>
+                    <article class="uk-width-2-3@s uk-margin-large-bottom">Recently, I'm trying to explore my horizon of all kinds , which makes me I keep improving my design and coding ability.</article>
+                </div>
+                
+                <div class="article_wrap" uk-grid>
+                    <article class="uk-width-3-3 uk-margin-large-bottom">As Walter Gropius (1883-1969) once advocated, we should breaking the barrier between fine arts and applied arts.This is what I pursued for the all time. Arts is undoubtedly my nature, </article>
+                </div>
+                <div class="scroll-img-b" id="scroll-element-b" >
+                    <img src="images/IMG_1221_b.jpg" alt="">
+                </div>
+    
+            </section>
+        </div>
+        
+    </main>
+    <footer class="pj_footer">
+        <div class="icon_wrap">
+            <a href=""><img src="images/envelope-regular (1).svg" alt=""> </a>
+            <a href=""><img src="images/github-brands.svg" alt=""> </a>
+            <a href=""><img src="images/linkedin-in-brands.svg" alt=""> </a>
+            <a href=""><img src="images/instagram-brands.svg" alt=""> </a>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/9e2284b284.js" crossorigin="anonymous"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script>
+        $(window).ready(function(){
+            var ipad=$('#ipad').width();
+            var macH=$('span.macbook').height();
+            var iphoneMockup=$('img.phone_mockup').width();
+            var zero=0;
+            $('span.iphone').width(ipad*0.48);
+            $('div.screen').height(macH*0.8);
+            $('video.get_chance_mockup').width(iphoneMockup*0.83);
+            
+            $(window).scroll(function(){
+                $("nav.navbar").toggleClass("hide",$(window).scrollTop()>zero);
+                zero=$(window).scrollTop();
+            });
+
+            
+        });
+        $("#toggle").click(function () {
+            $(this).toggleClass("active-burger");
+            $("#overlay").toggleClass("open");
+            $('.uk-parent').removeClass("uk-open");
+            $('.uk-nav-sub').attr("hidden",true);
+        });
+        $(window).resize(function(){
+            var ipad=$('#ipad').width();
+            var macH=$('span.macbook').height();
+            var iphoneMockup=$('img.phone_mockup').width();
+            $('span.iphone').width(ipad*0.48);
+            $('div.screen').height(macH*0.8);
+            $('video.get_chance_mockup').width(iphoneMockup*0.83);
+            let intViewportWidth = window.innerWidth
+            if(intViewportWidth>768){
+                $("#overlay").removeClass("open");
+                $('.button_container').removeClass("active-burger");
+            }
+        });
+        
+    </script>
+    <script>
+        // var controller = new ScrollMagic.Controller();
+        // var animation01 = TweenMax.staggerFromTo('#sticky-element', 1 , {
+        //         y:100,
+        //     },{
+        //         y:-200,
+        //     })
+        // var section_02 = new ScrollMagic.Scene({
+        //     triggerElement: ".main_content_wrap",
+        //     reverse: true,
+        //     offset: 1,
+        //     triggerHook: 0
+        
+        // }).setTween(animation01)
+        // .addIndicators()
+        // .addTo(controller)
+        
+      $(window).scroll(function() {
+        var offset = $(window).scrollTop();
+        offset = offset * -0.2;
+        offset02 = offset * 2;
+       
+        $("#scroll-element").css({
+            "-moz-transform": "translate3d(0px," + offset + "px,0px)",
+            "-webkit-transform": "translate3d(0px," + offset + "px,0px)",
+            "-o-transform": "translate3d(0px," + offset + "px,0px)",
+            "-ms-transform": "translate3d(0px," + offset + "px,0px)",
+            transform: "translate3d(0px," + offset + "px,0px)"
+         });
+         
+        $("#scroll-element-b").css({
+            "-moz-transform": "translate3d(0px," + offset02 + "px,0px)",
+            "-webkit-transform": "translate3d(0px," + offset02 + "px,0px)",
+            "-o-transform": "translate3d(0px," + offset02 + "px,0px)",
+            "-ms-transform": "translate3d(0px," + offset02 + "px,0px)",
+            transform: "translate3d(0px," + offset02 + "px,0px)"
+         });
+        });
+
+    </script>
+    
+</body>
+</html>
