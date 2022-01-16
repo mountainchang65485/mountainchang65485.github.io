@@ -2,7 +2,9 @@
 @import "default";
 @import "mixins";
 @import "component";
-*{ font-family: 'Roboto', sans-serif; cursor: url('../images/pointerAsset3x.png'),pointer; }
+*{ font-family: 'Roboto', sans-serif; 
+    // cursor: url('../images/pointerAsset3x.png'),pointer; 
+}
 .container{ max-width: 1200px !important; }
 // main{ padding: 0px 15px; }//
 .title_intro_header{

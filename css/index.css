@@ -425,8 +425,7 @@ article {
   color: #0C26B4; }
 
 * {
-  font-family: 'Roboto', sans-serif;
-  cursor: url("../images/pointerAsset3x.png"), pointer; }
+  font-family: 'Roboto', sans-serif; }
 
 .container {
   max-width: 1200px !important; }
