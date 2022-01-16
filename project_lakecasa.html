@@ -18,6 +18,9 @@
     
 </head>
 <body>
+    <div id="mask-cover">
+      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);"><img src="images/mt-logo-white.svg" alt="" style="width: 200px;"></div>
+    </div>
     <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
@@ -93,8 +96,8 @@
                 </div>
         </section>
         <div class="illus_detail container" style="margin-top: 30px;"><img src="images/lake_casa_01.jpg" alt=""></div>
-        <div class="illus_detail container"><video src="images/lake_casa_02.mp4" autoplay loop muted></video></div>
-        <div class="illus_detail container"><video src="images/lake_casa_03.mp4" autoplay loop muted></video></div>
+        <div class="illus_detail container"><video src="images/lake_casa_02.mp4" id="wait01" autoplay loop muted></video></div>
+        <div class="illus_detail container"><video src="images/lake_casa_03.mp4" id="wait02" autoplay loop muted></video></div>
     </main>
     <footer class="pj_footer">
         <div class="icon_wrap">
@@ -109,6 +112,12 @@
     <script src="js/uikit-icons.min.js"></script>
     
     <script>
+        
+        $('#wait01,#wait02').ready(function() {
+            setTimeout(function(){
+               $('#mask-cover').addClass('mask-hide');
+            },1500);
+        });
         // $(window).ready(function(){
         //     var ipad=$('#ipad').width();
         //     var macH=$('span.macbook').height();
