@@ -16,6 +16,9 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
 </head>
 <body style="background-color:#fff;">
+    <div id="mask-cover">
+      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);"><img src="images/mt-logo-white.svg" alt="" style="width: 200px;"></div>
+    </div>
     <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
@@ -239,7 +242,7 @@
                                 <img src="images/re-02.jpg" alt="">
                                 <img src="images/re-03.jpg" alt="">
                                 <img src="images/re-04.jpg" alt="">
-                                <img src="images/re-05.jpg" alt="">
+                                <img src="images/re-05.jpg" alt="" id="wait">
                             </div>
                                 <span class="macbook"><img src="images/MacBook-p-1080.png" alt=""> </span>
                         </div>
@@ -260,6 +263,11 @@
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <script>
+        $('#wait').ready(function() {
+            setTimeout(function(){
+               $('#mask-cover').addClass('mask-hide');
+            },1500);
+        });
         $(window).ready(function(){
             var ipad=$('#ipad').width();
             var macH=$('span.macbook').height();
