@@ -5,6 +5,8 @@
 *{ font-family: 'Roboto', sans-serif; 
     // cursor: url('../images/pointerAsset3x.png'),pointer; 
 }
+body{
+    background-color: #E0E0E0 !important;padding-top: 80px;}
 .container{ max-width: 1200px !important; }
 // main{ padding: 0px 15px; }//
 .title_intro_header{
@@ -115,7 +117,11 @@
 
     }
 }
-header{ pointer-events: none; }
+nav.uk-navbar{
+    @include respond-to(px1199){
+        background-color: #E0E0E0;
+    }}
+header{ pointer-events: none;}
 .works img{ width:100%; }
 .works{
     // padding: 5px !important;

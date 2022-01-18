@@ -149,6 +149,7 @@ $fontUti: Arial,'LiHei Pro',微軟正黑體,新細明體,sans-serif;
 /*瀏覽器*/
 $px1920: 1920px;//px1920
 $lgw: 1450px; //ld
+$px1199: 1199px; //px1199
 $mdw: 1000px; //sm
 $sdw: 960px; //ssm
 $smw: $mdw+200; // md
@@ -171,6 +172,7 @@ $breakpoints: (
     'md': 'screen and (max-width: #{$smw})',
     'sm': 'screen and (max-width: #{$mdw})',
     'ssm': 'screen and (max-width: #{$sdw})',
+    'px1199': 'screen and (max-width: #{$px1199})',
     'px992': 'screen and (max-width: #{$px992})',
     'px768': 'screen and (max-width: #{$px768})',
     'px640': 'screen and (max-width: #{$px640})',

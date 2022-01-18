@@ -17,7 +17,9 @@
 </head>
 <body style="background-color:#fff;">
     <div id="mask-cover">
-      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);"><img src="images/mt-logo-white.svg" alt="" style="width: 200px;"></div>
+      <div>
+        <div><img src="images/mt-logo-white.svg" alt=""></div>
+      </div>
     </div>
     <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left">
@@ -262,26 +264,24 @@
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <script>
-        $('#wait').ready(function() {
-            setTimeout(function(){
-               $('#mask-cover').addClass('mask-hide');
-            },1500);
-        });
-        $(window).ready(function(){
-            var ipad=$('#ipad').width();
-            var macH=$('span.macbook').height();
-            var iphoneMockup=$('img.phone_mockup').width();
-            var zero=0;
-            $('span.iphone').width(ipad*0.48);
-            $('div.screen').height(macH*0.8);
-            $('video.get_chance_mockup').width(iphoneMockup*0.83);
-            
-            $(window).scroll(function(){
-                $("nav.navbar").toggleClass("hide",$(window).scrollTop()>zero);
-                zero=$(window).scrollTop();
-            });
-            
-        });
+        $(document).ready(function(){
+            $(window).on('load',function() {
+                $('#mask-cover').addClass('mask-hide');
+                let ipad=$('#ipad').width();
+                let macH=$('span.macbook').height();
+                let iphoneMockup=$('img.phone_mockup').width();
+                let zero=0;
+                $('span.iphone').width(ipad*0.48);
+                $('div.screen').height(macH*0.8);
+                $('video.get_chance_mockup').width(iphoneMockup*0.83);
+                
+                $(window).scroll(function(){
+                    $("nav.navbar").toggleClass("hide",$(window).scrollTop()>zero);
+                    zero=$(window).scrollTop();
+                });
+             });
+        })
+       
         $("#toggle").click(function () {
             $(this).toggleClass("active-burger");
             $("#overlay").toggleClass("open");
@@ -289,9 +289,9 @@
             $('.uk-nav-sub').attr("hidden",true);
         });
         $(window).resize(function(){
-            var ipad=$('#ipad').width();
-            var macH=$('span.macbook').height();
-            var iphoneMockup=$('img.phone_mockup').width();
+            let ipad=$('#ipad').width();
+            let macH=$('span.macbook').height();
+            let iphoneMockup=$('img.phone_mockup').width();
             $('span.iphone').width(ipad*0.48);
             $('div.screen').height(macH*0.8);
             $('video.get_chance_mockup').width(iphoneMockup*0.83);

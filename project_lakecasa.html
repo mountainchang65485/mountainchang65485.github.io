@@ -19,7 +19,9 @@
 </head>
 <body>
     <div id="mask-cover">
-      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);"><img src="images/mt-logo-white.svg" alt="" style="width: 200px;"></div>
+      <div>
+        <div><img src="images/mt-logo-white.svg" alt=""></div>
+      </div>
     </div>
     <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left">
@@ -112,11 +114,9 @@
     
     <script>
         
-        $('#wait01,#wait02').ready(function() {
-            setTimeout(function(){
-               $('#mask-cover').addClass('mask-hide');
-            },1500);
-        });
+    $(window).on('load',function() {
+          $('#mask-cover').addClass('mask-hide');
+     });
         // $(window).ready(function(){
         //     var ipad=$('#ipad').width();
         //     var macH=$('span.macbook').height();

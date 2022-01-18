@@ -21,6 +21,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script> -->
 </head>
 <body>
+    <div id="mask-cover">
+        <div>
+          <div><img src="images/mt-logo-white.svg" alt=""></div>
+        </div>
+      </div>
     <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
@@ -117,10 +122,13 @@
     <script src="js/uikit-icons.min.js"></script>
     <script>
         $(window).ready(function(){
-            var ipad=$('#ipad').width();
-            var macH=$('span.macbook').height();
-            var iphoneMockup=$('img.phone_mockup').width();
-            var zero=0;
+           $(window).on('load',function() {
+                 $('#mask-cover').addClass('mask-hide');
+            });
+            let ipad=$('#ipad').width();
+            let macH=$('span.macbook').height();
+            let iphoneMockup=$('img.phone_mockup').width();
+            let zero=0;
             $('span.iphone').width(ipad*0.48);
             $('div.screen').height(macH*0.8);
             $('video.get_chance_mockup').width(iphoneMockup*0.83);
@@ -139,9 +147,9 @@
             $('.uk-nav-sub').attr("hidden",true);
         });
         $(window).resize(function(){
-            var ipad=$('#ipad').width();
-            var macH=$('span.macbook').height();
-            var iphoneMockup=$('img.phone_mockup').width();
+            let ipad=$('#ipad').width();
+            let macH=$('span.macbook').height();
+            let iphoneMockup=$('img.phone_mockup').width();
             $('span.iphone').width(ipad*0.48);
             $('div.screen').height(macH*0.8);
             $('video.get_chance_mockup').width(iphoneMockup*0.83);

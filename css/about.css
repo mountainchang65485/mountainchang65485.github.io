@@ -231,11 +231,24 @@ textarea {
   left: 0;
   z-index: 9999;
   opacity: 1;
-  transition: 0.3s; }
+  transition: 0.3s;
+  overflow: hidden; }
+  #mask-cover > div {
+    width: 100vw;
+    height: 100vh;
+    position: relative; }
+  #mask-cover > div > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 200px; }
+  #mask-cover > div > div img {
+    width: 100%; }
 
 #mask-cover.mask-hide {
-  opacity: 0;
   transition: 0.3s;
+  width: 0;
   pointer-events: none; }
 
 .clean {
@@ -245,37 +258,45 @@ textarea {
   transform: translateY(-100%);
   transition: 0.5s; }
 
-nav {
+nav.uk-navbar {
   position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   font-weight: 700 !important;
   padding-left: 40px !important;
-  padding-right: 40px !important; }
+  padding-right: 40px !important;
+  z-index: 1000; }
+  @media screen and (max-width: 1199px) {
+    nav.uk-navbar {
+      background-color: #fff; } }
   @media screen and (max-width: 640px) {
-    nav {
+    nav.uk-navbar {
       padding-left: 20px !important;
       padding-right: 20px !important; } }
-  nav a {
+  nav.uk-navbar a {
     padding-right: 0px  !important;
     padding-left: 0px  !important;
     color: #0C26B4 !important; }
-  nav .nav-options {
+  nav.uk-navbar .nav-options {
     position: relative;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     margin-left: 30px !important; }
     @media screen and (max-width: 768px) {
-      nav .nav-options {
+      nav.uk-navbar .nav-options {
         display: none; } }
-  nav .nav-options::before {
+  nav.uk-navbar .nav-options::before {
     transition: 0.3s;
     top: 50%;
     transform: translateY(-50%); }
-  nav .nav-options:hover::before {
+  nav.uk-navbar .nav-options:hover::before {
     content: '';
     width: 100%;
     height: 3px;
     background-color: #0C26B4;
     position: absolute;
+    pointer-events: none;
     animation: navLine 0.3s; }
 
 @keyframes navLine {
@@ -283,15 +304,15 @@ nav {
     width: 0px; }
   100% {
     width: 100%; } }
-  nav .burger-wrap {
+  nav.uk-navbar .burger-wrap {
     display: none; }
     @media screen and (max-width: 768px) {
-      nav .burger-wrap {
+      nav.uk-navbar .burger-wrap {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center; } }
-    nav .burger-wrap ul li {
+    nav.uk-navbar .burger-wrap ul li {
       border: none !important;
       background-color: none !important;
       padding-left: 0px;
@@ -423,6 +444,10 @@ article {
   font-weight: 500;
   line-height: 1.5;
   color: #0C26B4; }
+
+@media screen and (max-width: 1199px) {
+  header {
+    margin-top: 80px; } }
 
 header {
   position: relative;

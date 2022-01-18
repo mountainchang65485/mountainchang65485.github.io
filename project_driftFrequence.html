@@ -18,6 +18,11 @@
     
 </head>
 <body > 
+    <div id="mask-cover">
+      <div>
+        <div><img src="images/mt-logo-white.svg" alt=""></div>
+      </div>
+    </div>
     <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
@@ -104,6 +109,9 @@
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <script>
+        $(window).on('load',function() {
+              $('#mask-cover').addClass('mask-hide');
+         });
         // $(window).ready(function(){
         //     var ipad=$('#ipad').width();
         //     var macH=$('span.macbook').height();
