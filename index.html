@@ -8,6 +8,7 @@
 </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
 <link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/iframe-lightbox.min.css">
 <script
 src="https://code.jquery.com/jquery-3.4.1.js"
 integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -16,6 +17,8 @@ crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+<script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+<script language="javascript"> history.replaceState(null, '', location.pathname + location.search);</script>
 <!-- <script src="node_modules/gsap/src/minified/TweenMax.min.js"></script> -->
 <!-- <script src="https://cdn.rawgit.com/bradley/Blotter/master/build/blotter.min.js"></script>
 <script src="js/slidingDoorMaterial.js"></script> -->
@@ -102,7 +105,7 @@ crossorigin="anonymous"></script>
               </div>
               
               <div class="works uk-margin-remove-top uk-padding-small uk-padding-remove-top uk-padding-remove-right">
-                <a href="https://case.jun-yi.tw/heartoftheworld/">
+                <a class="iframe-lightbox-link" href="https://case.jun-yi.tw/heartoftheworld/"  data-scrolling="true" data-lightbox="iframe" style="width:100%;">
                   <div class="pj-pic" style="overflow: hidden;"><img class="responsive-img" src="images/works-heartoftheworld.jpg" alt="" id="glitch"></div>
                 </a>
                 <h2 class="project-title">
@@ -110,7 +113,7 @@ crossorigin="anonymous"></script>
                 </h2>
               </div>
               <div class="works uk-margin-remove-top uk-padding-small uk-padding-remove-top uk-padding-remove-right">
-                <a href="https://opw.dreamsite.tw/shine/">
+                <a class="iframe-lightbox-link" href="https://opw.dreamsite.tw/shine/"  data-scrolling="true" data-lightbox="iframe" style="width:100%;">
                   <div class="pj-pic" style="overflow: hidden;"><img class="responsive-img" src="images/works-shine.jpg" alt="" id="glitch"></div>
                 </a>
                 <h2 class="project-title">
@@ -118,7 +121,7 @@ crossorigin="anonymous"></script>
                 </h2>
               </div>
               <div class="works uk-margin-remove-top uk-padding-small uk-padding-remove-top uk-padding-remove-right">
-                <a href="https://case.jun-yi.tw/chinpu/">
+                <a class="iframe-lightbox-link" href="https://case.jun-yi.tw/chinpu/"  data-scrolling="true" data-lightbox="iframe" style="width:100%;">
                   <div class="pj-pic" style="overflow: hidden;"><img class="responsive-img" src="images/works-chinpu.jpg" alt="" id="glitch"></div>
                 </a>
                 <h2 class="project-title">
@@ -126,7 +129,7 @@ crossorigin="anonymous"></script>
                 </h2>
               </div>
               <div class="works uk-margin-remove-top uk-padding-small uk-padding-remove-top uk-padding-remove-right">
-                <a href="https://case.heart-mst.tw/dulala/">
+                <a class="iframe-lightbox-link" href="https://case.heart-mst.tw/dulala/"  data-scrolling="true" data-lightbox="iframe" style="width:100%;">
                   <div class="pj-pic" style="overflow: hidden;"><img class="responsive-img" src="images/works-dulala.jpg" alt="" id="glitch"></div>
                 </a>
                 <h2 class="project-title">
@@ -134,7 +137,7 @@ crossorigin="anonymous"></script>
                 </h2>
               </div>
                 <div class="works uk-margin-remove-top uk-padding-small uk-padding-remove-top uk-padding-remove-right">
-                  <a href="https://dreamsite.tw/">
+                  <a href="https://dreamsite.tw/" >
                     <div class="pj-pic" style="overflow: hidden;"><img class="responsive-img" src="images/work-ds.png" alt="" id="glitch"></div>
                   </a>
                   <h2 class="project-title">
@@ -226,6 +229,7 @@ crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9e2284b284.js" crossorigin="anonymous"></script>
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
+    <script src="js/iframe-lightbox.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
     <!-- <script>
         
@@ -248,6 +252,10 @@ crossorigin="anonymous"></script>
     $(document).ready(function(){
       $(window).on('load',function() {
             $('#mask-cover').addClass('mask-hide');
+            [].forEach.call(document.getElementsByClassName("iframe-lightbox-link"), function (el) {
+               el.lightbox = new IframeLightbox(el);
+               $('.iframe-lightbox').insertAfter('#lightbox-plan');
+            });
       });
     })
     // window.addEventListener("beforeunload",function(e){
