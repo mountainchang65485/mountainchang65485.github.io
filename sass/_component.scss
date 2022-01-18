@@ -30,12 +30,28 @@
     position: fixed; width: 100%; height: 100vh; background: #0C26B4; top: 0;left: 0; z-index: 9999; opacity: 1;transition: 0.3s; overflow: hidden;
     & > div{width: 100vw; height: 100vh; position: relative;}
     & > div > div{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); max-width: 200px;}
+    & > div > div::after{content: ''; position: absolute; top: 50%; left: 50%; 
+        transform: translate(-50%,-50%); 
+        display: block;
+        width: 300px; height: 100vh;
+        background: url(../images/mt-logo.svg)no-repeat center;background-size: contain;
+        animation: logo_run 15s linear infinite;
+    }
     & > div > div img{ width: 100%;}
+    @keyframes logo_run {
+        0%{ transform: translate(-50%,-50%) rotateZ(0deg); }
+        100%{ transform: translate(-50%,-50%) rotateZ(360deg); }
+    }
 }
 #mask-cover.mask-hide{  transition: 0.3s; width: 0; pointer-events: none;  }
 .clean{ clear: both;}
 .hide{ transform: translateY(-100%);transition: 0.5s;}
 
+#offcanvas-slide{
+ .uk-navbar-nav{ margin-left: -15px; }
+ .uk-offcanvas-bar{ background: #0C26B4; }
+}
+    
 nav.uk-navbar{
     position: fixed;
     width:100%;

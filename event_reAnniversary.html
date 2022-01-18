@@ -24,7 +24,7 @@
     <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
-                <li class="uk-active"><a href="index.html">Mountain Chang</a></li>
+                <li class="uk-active"><a href="index.html">MOUNTAIN CHANG</a></li>
             </ul>
         </div>
         <div class="uk-navbar-right">
@@ -32,41 +32,26 @@
                 <li class="uk-active nav-options"><a href="about.html">about</a></li>
             </ul>
         </div>
-        <div class="uk-navbar-right burger-wrap" >
+        <div class="uk-navbar-right burger-wrap">
             <ul class="uk-navbar-nav">
-                <li class="uk-active burger uk-button uk-button-default uk-text-middle" type="button">
-                    <!-- <i class="fas fa-grip-lines" style="font-size:1.5rem;"></i> -->
-                    <div class="button_container" id="toggle">
-                        <span class="top"></span>
-                        <span class="bottom"></span>
-                    </div>
-                </li>
+                <li class="uk-active burger uk-button uk-button-default uk-text-middle" type="button" uk-toggle="target: #offcanvas-slide"><i class="fas fa-grip-lines" style="font-size:1.5rem;"></i></li>
             </ul>
         </div>
         
-        <div class="overlay uk-padding-small uk-padding-remove-horizontal" id="overlay">
-            <div class="overlay-wrap">
-                <!-- <button class=" uk-offcanvas-close" type="button" uk-close></button> -->
-                <h1><img src="images/mt-logo02.svg" alt=""></h1>
-                    <ul class="uk-nav uk-nav-default uk-nav-parent-icon" uk-nav>
-                        <li class="uk-parent">
-                            <a href="#">project</a>
-                            <ul class="uk-nav-sub">
-                                <li><a href="#">Sub item</a></li>
-                                <li><a href="#">Sub item</a></li>
-                                <li><a href="#">Sub item</a></li>
-                                <li><a href="#">Sub item</a></li>
-                                <li><a href="#">Sub item</a></li>
-                                <li><a href="#">Sub item</a></li>
-                            </ul>
-                        </li>
-                        <li class="uk-active">
-                            <a  href="about.html">about</a>
-                        </li>
-                    </ul>
-            </div>
-        </div>
     </nav>
+    <div id="offcanvas-slide" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <h1>MOUNTAIN CHANG</h1>
+            <div class="uk-navbar">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="index.html">project</a></li>
+                    <li class="uk-active"><a href="about.html">about</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
 
 
     <!-- <div id="offcanvas-slide" uk-offcanvas="overlay: true">
