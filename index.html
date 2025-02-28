@@ -120,7 +120,7 @@ crossorigin="anonymous"></script>
                 </h2>
               </div>
               <div class="works uk-margin-remove-top uk-padding-small uk-padding-remove-top uk-padding-remove-right">
-                <a href="https://js-nijisanjien.com/2023/" target="_blank">
+                <a href="https://creative.microad.tw/demo/2024/jeog-seoul/2023/" target="_blank">
                   <div class="pj-pic" style="overflow: hidden;"><img class="responsive-img" src="images/works-js.jpg" alt="" id="glitch"></div>
                 </a>
                 <h2 class="project-title">
@@ -298,9 +298,39 @@ crossorigin="anonymous"></script>
     // $(window).on('load',function() {
     //       $('#mask-cover').addClass('mask-hide');
     //  });
+       // 圖片 URL 列表
+       const imageUrls = [
+      'https://mountainchang65485.github.io/images/works-tokyo.png',
+      'https://mountainchang65485.github.io/images/jin_cover.jpg'
+    ];
+
+    // 圖片預載函數
+    function preloadImage(url) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = () => resolve(url);  // 載入成功
+        img.onerror = () => reject(url); // 載入失敗
+      });
+    }
+
+    // 確認所有圖片載入完成
+    Promise.all(
+      imageUrls.map((url) => preloadImage(url)) // 對每張圖片執行載入檢查
+    )
+      .then(() => {
+        console.log('所有圖片載入完成');
+        // 隱藏loading畫面，顯示主頁內容
+        $('#mask-cover').addClass('mask-hide');
+      })
+      .catch((errorUrl) => {
+        console.error(`圖片載入失敗: ${errorUrl}`);
+        $('#mask-cover').addClass('mask-hide');
+      });
+
+   
     $(document).ready(function(){
       $(window).on('load',function() {
-            $('#mask-cover').addClass('mask-hide');
             [].forEach.call(document.getElementsByClassName("iframe-lightbox-link"), function (el) {
                el.lightbox = new IframeLightbox(el);
                $('.iframe-lightbox').insertAfter('#lightbox-plan');
