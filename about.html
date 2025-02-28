@@ -70,7 +70,7 @@
             <section class="container">
                 <div class=" article_wrap" uk-grid> 
                     <div class="scroll-img" id="scroll-element" >
-                       <img src="images/IMG_1237_b.jpg" alt="">
+                       <img class=" img-load" src="images/IMG_1237_b.jpg" alt="">
                     </div>
                     <article class="uk-width-2-3@s uk-width-1-2@m uk-margin-large-bottom">I'm a designer based in Taipei, Taiwan. I graduated from National Taiwan University of Arts, majored in fine arts and mainly focus on photography, mix media installations and graphic design.</article>
                    
@@ -86,7 +86,7 @@
                     <article class="uk-width-3-3 uk-margin-large-bottom">As Walter Gropius (1883-1969) once advocated, we should breaking the barrier between fine arts and applied arts.This is what I pursued for the all time.</article>
                 </div>
                 <div class="scroll-img-b" id="scroll-element-b" >
-                    <img src="images/IMG_1221_b.jpg" alt="">
+                    <img class=" img-load" src="images/IMG_1221_b.jpg" alt="">
                 </div>
     
             </section>
@@ -101,15 +101,13 @@
             <a href=""><img src="images/instagram-brands.svg" alt=""> </a>
         </div>
     </footer>
+    <script src="js/m.js"></script>
     <script src="https://kit.fontawesome.com/9e2284b284.js" crossorigin="anonymous"></script>
     <script src="js/animation.js"></script>
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <script>
         $(window).ready(function(){
-           $(window).on('load',function() {
-                 $('#mask-cover').addClass('mask-hide');
-            });
             let ipad=$('#ipad').width();
             let macH=$('span.macbook').height();
             let iphoneMockup=$('img.phone_mockup').width();
